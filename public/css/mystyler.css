@@ -1,0 +1,63 @@
+
+/*  Author: Cecilia Santiago     
+    Styles used for Customer form
+*/
+
+.back-image {
+    background-image: url("../images/Mayon_Volcano_1.jpg");  
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-attachment:fixed;  
+}
+
+.img-logor {
+    margin-left: 4%;    
+    border: 2px solid maroon;   
+}
+
+
+.logo-text { 
+    font-family: 'Akaya Telivigala', cursive;
+    text-align:center; 
+    width:15%;    
+    font-size: 1vw; 
+    color:maroon;         
+    white-space: nowrap;
+    margin-left: 4%;  
+    margin-top: 3%;
+}
+
+#regform {
+    font-family: 'Abel', sans-serif;   
+    color:whitesmoke;
+    width:50%;
+    align-items: center;    
+    margin:auto;
+ 
+}
+
+#fname, #lname, #addr1,
+#addr2, #email, #city,
+#prov, #post, #phone,
+#bday, #usrname, #passwd{
+    background:rgb(234, 245, 248);
+ 
+}
+
+#msg{
+    color:maroon;    
+    background:wheat;
+ }
+
+.form-group {
+    padding-top: 15px;
+ }
+
+ h6 {        
+    font-family: 'Abel', sans-serif;
+    font-size: 12px;
+    color:whitesmoke;   
+    padding-bottom: 20px; 
+    white-space: nowrap;
+}
