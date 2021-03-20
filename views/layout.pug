@@ -1,0 +1,66 @@
+doctype html
+html 
+    head 
+        meta(charset='UTF-8')
+        meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+        meta(http-equiv='X-UA-Compatible' content='ie=edge')
+        script(src="https://kit.fontawesome.com/af3a69f2b2.js" crossorigin="anonymous")
+        link(rel='stylesheet' href='/bower_components/bootstrap/dist/css/bootstrap.css')
+        link(rel='stylesheet' href='/css/style.css')
+        script(src='/js/main.js')
+        title Travel Express 
+    body 
+        nav.navbar.navbar-expand-md.navbar-light.bg-light.sticky-top 
+            .container-fluid 
+                a(class='navbar-brand' href='/')
+                    img(src='#' width='6%')
+                    |Travel Experts
+                button(class='navbar-toggler' type='button' data-toggle='collaspse' data-target='#navbarResponsive')
+                    span(class='navbar-toggler-icon')
+                div(class='collapse navbar-collapse' id='navbarResponsive')
+                    ul(class='navbar-nav ml-auto')
+                        li(class='nav-item')
+                            a(class='nav-link' href='/') Home
+                        li(class='nav-item')
+                            a(class='nav-link' href='#') About
+                        li(class='nav-item')
+                            a(class='nav-link' href='/contact') Contact
+                        li(class='nav-item')
+                            a(class='nav-link' href='/register') Register
+                        li(class='nav-item')
+                            a(class='nav-link' href='/gallery') Packages
+        .container-fluid 
+            block content 
+            br
+            hr
+            footer 
+                div(class='container-fluid padding')
+                div(class='row text-center')
+                    div(class="col-md-4")
+                        hr(class='light')
+                        img(src='#' width='10%')
+                        hr(class='light')
+                        p 555-555-5555
+                        p email@myemail.com
+                        p 100 Street Name 
+                        p City, State, Postal Code 
+                    div(class='col-md-4')
+                        hr(class='light')
+                        h5 Our Hours 
+                        hr(class='light')
+                        p Monday: 9am-5pm
+                        p Saturday: 10am-4pm
+                        p Sunday: Closed 
+                    div(class='col-md-4')
+                        hr(class='light')
+                        h5 Locations 
+                        hr(class='light')
+                        p City, State, Postal Code
+                        p City, State, Postal Code
+                        p City, State, Postal Code
+                        p City, State, Postal Code
+                    div(class='col-12')
+                        hr(class='light-100')
+                        h5 &copy; Travel Experts
+        script(src='/bower_components/jquery/dist/jquery.js')
+        script(src='/bower_components/bootstrap/dist/js/bootstrap.js')
