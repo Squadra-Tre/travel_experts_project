@@ -12,10 +12,9 @@ router.get('/', function (req, res, next) {
 });
 
 /* GET package page. */
-router.get("/packages", function (req, res, next) {
-  res.render("packg");
+router.get('/packages', function (req, res, next) {
+  res.render('packages');
 });
-
 
 /* GET Register page. */
 router.get("/register", function (req, res, next) {
@@ -34,14 +33,15 @@ router.get("/register", function (req, res, next) {
 router.post("/register", function (req, res, next) {
   const myregist = new Customer(req.body);
   myregist.save((err, result) => {
-    console.log('The data is saved in', result);
+    //console.log('The data is saved in', result);
     if (err) { //res.send(err);
       console.log(err);
     }
   })
-  const getbooking = new Booking(req.body);
+    const getbooking = new Booking(req.body);
+  getbooking.insert({ BookingNo: "WWWW", CustomerId: myregist.CustomerId, TripTypeId: '', PackageId: '' })
   getbooking.save({
-    $currentDate: { BookingDate: true, "cancellation.date": { $type: "timestamp" } },
+    BookingNo: "WWWW", CustomerId: myregist.CustomerId, TripTypeId: '', PackageId: ''
   }, (err2, resb) => {
     console.log('Booking is saved in', resb);
     if (err2) {
@@ -69,3 +69,6 @@ router.post("/register", function (req, res, next) {
 })*/
 
 module.exports = router;
+
+//This is Cecilia
+/*Push Test*/

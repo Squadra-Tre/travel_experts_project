@@ -1,67 +1,80 @@
-.button {
-  background-color: rgb(228, 228, 228);
-  margin: 15px;
-  padding: 5px;
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+.pkgimg {
+  width: 100%;
   border-radius: 10px;
-  border: none;
-  max-height: 100%;
-  max-width: 100%;
+  margin-top: 3px;
+  margin-left: 3px;
+  margin-bottom: 3px;
+  margin-right: 10px;
+  box-shadow: 2px 2px 3px #000000bd;
+}
+.button {
+  border-radius: 10px;
+  background-color: rgb(38, 70, 83);
+  margin: 15px;
 }
 .button:hover {
   -webkit-box-shadow: 5px 5px 3px 3px rgba(0, 0, 0, 0.3);
   box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.3);
 }
-
-.clearfix {
-  overflow: auto;
-}
-.pkgimg {
-  border-radius: 5px;
-  box-shadow: 3px 3px 4px #000000bd;
-}
-.imgcol {
-  margin: auto;
-  padding: 5px;
-  display: flex;
-  float: left;
-}
-.pgkcol {
-  margin: auto;
-  border-radius: 5px;
-  float: right;
-}
-.title {
-  font-size: 40px;
-  margin: 25px;
-  color: black;
-  font-weight: bold;
-}
-.desc {
-  font-size: 28px;
-  color: black;
-  margin-top: 30px;
-  margin-right: 5px;
-  margin-left: 5px;
-  padding-left: 30px;
-}
 .price {
-  background-color: rgb(19, 19, 71);
+  background-color: rgb(42, 157, 143);
   color: white;
-  border-radius: 5px;
-  padding: 10px;
-  margin-right: 12px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 25px;
+  width: 8rem;
+  height: 3.7rem;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  margin-left: 70px;
+  margin-bottom: 20px;
+  margin-top: 15px;
+}
+
+.title {
+  text-align: left;
+  padding: 20px;
+  font-size: 40px;
+  margin-top: 20px;
+  color: white;
+}
+
+.desc {
+  text-align: left;
+  padding-top: 25px;
+  font-size: 25px;
+  color: white;
+}
+
+.coldesc {
+  text-align: center;
+}
+
+.pkgfont {
   text-align: center;
   font-size: 30px;
-  max-height: 70px;
-  max-width: 116px;
+  font-weight: bold;
+}
+
+/*Package Description Page*/
+.pkgimglg {
+  width: 100%;
 }
 
 @media only screen and (max-width: 1000px) {
   .title {
     font-size: 22px;
+    padding-left: 50px;
   }
   .desc {
     font-size: 15px;
+    padding-top: 0px;
+    padding-left: 50px;
   }
   .price {
     font-size: 20px;
