@@ -3,7 +3,7 @@
     Styles used for Customer form
 */
 
-.back-image {
+/*.back-image {
     background-image: url("../images/Mayon_Volcano_1.jpg");  
     background-position: center;
     background-repeat: no-repeat;
@@ -14,7 +14,7 @@
 .img-logor {
     margin-left: 4%;    
     border: 2px solid maroon;   
-}
+}*/
 
 
 .logo-text { 
@@ -30,17 +30,22 @@
 
 #regform {
     font-family: 'Abel', sans-serif;   
-    color:whitesmoke;
+    /*color:whitesmoke;*/
+    color:blue;
     width:50%;
     align-items: center;    
     margin:auto;
+    /*margin-left: 5%;
+    margin-top:5%;*/
  
 }
 
 #fname, #lname, #addr1,
 #addr2, #email, #city,
+#cntry, #hphone, #bphone,
 #prov, #post, #phone,
-#bday, #usrname, #passwd{
+#bday, #usrname, #passwd,
+#passwd2, #currdate, #travelcnt{
     background:rgb(234, 245, 248);
  
 }
