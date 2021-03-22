@@ -22,7 +22,7 @@ block content
     form#regform(method='POST' action='/users/register')   
       
       h1(style='text-align:center;')
-        strong Book a Package
+        strong Book a package #{package.PkgName}
         
       .form-row      
         .form-group.col-md-6
@@ -122,8 +122,7 @@ block content
         .form-group.col-md-4
         .form-group.col-md-4
             button#res.btn.btn-primary(style='margin-bottom: 20px;' type='reset' onclick='Confirm_Buttons()') Reset            
-            button#sub.btn.btn-primary(style='margin-left: 4px; margin-bottom: 20px;' type='submit' onclick='Confirm_Buttons()') Submit
-
+            button#sub.btn.btn-primary(style='margin-left: 4px; margin-bottom: 20px;' type='submit' onclick='Confirm_Buttons()') Book            
 
     script.
       LoadthePage();

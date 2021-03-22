@@ -17,8 +17,6 @@ router.get("/packages", function (req, res, next) {
 });
 
 
-
-
 /* GET Register page. */
 router.get("/register", function (req, res, next) {
   Package.findOne((err, package) => {
@@ -41,17 +39,37 @@ router.post("/register", function (req, res, next) {
       console.log(err);
     }
   })
+
+  /* POST Booking page. */
   const getbooking = new Booking(req.body);
-  getbooking.insert({ BookingNo: "WWWW", CustomerId: myregist.CustomerId, TripTypeId: '', PackageId: '' })
   getbooking.save({
-    BookingNo: "WWWW", CustomerId: myregist.CustomerId, TripTypeId: '', PackageId: ''
+    $addFields: {
+      BookingNo: "WWWW", CustomerId: myregist.CustomerId, TripTypeId: '', PackageId: ''
+    }
   }, (err2, resb) => {
     console.log('Booking is saved in', resb);
     if (err2) {
       console.log(err2);
     }
   })
-});
+
+  /*getbooking.update({
+    $addFields: {
+      BookingNo: "WWWW", CustomerId: myregist.CustomerId, TripTypeId: '', PackageId: ''
+    }
+  })*/
+})
+
+
+/*getbooking.save({
+  BookingNo: "WWWW", CustomerId: myregist.CustomerId, TripTypeId: '', PackageId: ''
+}, (err2, resb) => {
+  console.log('Booking is saved in', resb);
+  if (err2) {
+    console.log(err2);
+  }
+})
+});*/
 
 
 /*res.render("thankyou", {
@@ -73,8 +91,5 @@ router.post("/register", function (req, res, next) {
 
 module.exports = router;
 
-<<<<<<< HEAD
 //This is Cecilia
-=======
 /*Push Test*/
->>>>>>> 376d4228ef79049b09871b1ceb24e92b3902332c
