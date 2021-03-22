@@ -1,15 +1,12 @@
-const { Double, Int32 } = require('bson');
 const mongoose = require('mongoose');
-
-mongoose.connect('mongodb+srv://travel-expert:travel1234@cluster0.orc02.mongodb.net/test?authSource=admin&replicaSet=atlas-71fnej-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true',
-    { useNewUrlParser: true, useUnifiedTopology: true });
-
-const db = mongoose.connection;
-db.on('error', console.error.bind(console, 'connection error:'));
+const Schema = mongoose.Schema;
 
 const packSchema = new mongoose.Schema({
     PackageId: {
-        type: Int32,
+        type: Number,
+    },
+    PkgName: {
+        type: String,
     },
     PkgStartDate: {
         type: Date,
@@ -21,13 +18,15 @@ const packSchema = new mongoose.Schema({
         type: String,
     },
     PkgBasePrice: {
-        type: Double,
+        type: Number,
     },
     PkgAgencyCommission: {
-        type: Double,
+        type: Number,
+    },
+    Img: {
+        type: String,
     },
 
 });
 
-const Package = mongoose.model('Packages', packSchema);
-module.export = Package;
+module.exports = mongoose.model('package', packSchema)

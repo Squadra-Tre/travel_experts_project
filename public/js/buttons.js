@@ -1,3 +1,3 @@
 function package() {
-    location.href="package-detail";
+    location.href="/packages/details";
 }

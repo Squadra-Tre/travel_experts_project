@@ -12,14 +12,9 @@ router.get('/', function (req, res, next) {
 });
 
 /* GET package page. */
-router.get("/packages", function (req, res, next) {
-  res.render("packages");
+router.get('/packages', function (req, res, next) {
+  res.render('packages');
 });
-
-
-
-
-
 
 /* GET Register page. */
 router.get("/register", function (req, res, next) {
@@ -43,7 +38,7 @@ router.post("/register", function (req, res, next) {
       console.log(err);
     }
   })
-  const getbooking = new Booking(req.body);
+    const getbooking = new Booking(req.body);
   getbooking.insert({ BookingNo: "WWWW", CustomerId: myregist.CustomerId, TripTypeId: '', PackageId: '' })
   getbooking.save({
     BookingNo: "WWWW", CustomerId: myregist.CustomerId, TripTypeId: '', PackageId: ''
