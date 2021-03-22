@@ -1,0 +1,116 @@
+
+extends layout
+
+block othlink
+    link(rel='stylesheet' href='https://www.w3schools.com/w3css/4/w3.css')
+
+    // Bootstrap link
+    link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css'
+     integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm' crossorigin='anonymous')
+
+    // CSS file for index.html
+    link(rel='stylesheet' href='/css/mystyler.css')
+
+    // JavaScript link
+    script(src='/js/myjsscript.js')
+
+block content  
+    header(style='width:50%;')
+      h5.logo-text= hdlogo
+      #{hdimg}      
+    
+    form#regform(method='POST' action='/users/register')
+      h1(style='text-align:center;')
+        strong Create an account
+      .form-row      
+        .form-group.col-md-6
+          label(for='fname') First Name
+          input#fname.form-control(type='text' name='CustFirstName' placeholder='First Name' required='')
+          small#msg(style='display:none;') Enter First Name here.
+
+        .form-group.col-md-6
+          label(for='lname') Last Name
+          input#lname.form-control(type='text' name='CustLastName' placeholder='Last Name' required='')
+          small#msg(style='display:none;') Enter Last Name here.
+
+      .form-group
+        label(for='addr1') Address
+        input#addr1.form-control(type='text' name='CustAddress' placeholder='1234 Main St' required='')
+        small#msg(style='display:none;') Enter Main address here.
+
+      .form-row
+        .form-group.col-md-6
+          label(for='city') City
+          input#city.form-control(type='text' name='CustCity' placehholder='City' required='')
+          small#msg(style='display:none;') Enter City here.
+
+        .form-group.col-md-4
+          label(for='prov') Province
+          input#prov.form-control(list='options' name='CustProv' placeholder='Select Province...' required='')
+          small#msg(style='display:none;') Select Province here.
+          datalist#options            
+            option(value='AB')
+            option(value='BC')
+            option(value='MB')
+            option(value='NB')
+            option(value='NL')
+            option(value='NT')
+            option(value='NS')
+            option(value='NU')
+            option(value='ON')
+            option(value='PE')
+            option(value='QC')
+            option(value='SK')
+            option(value='YT')          
+
+        .form-group.col-md-2
+          label(for='post') Postal
+          input#post.form-control(type='text' name='CustPostal' placeholder='H1H 0H0' pattern='^[A-Z]\\d[A-Z] ?\\d[A-Z]\\d$' required='')
+          small#msg(style='display:none;') Enter Postal here.
+
+        .form-group.col-md-2
+          label(for='cntry') Country
+          input#post.form-control(type='text' name='CustCountry' placeholder='Country' required='')
+          small#msg(style='display:none;') Enter Country here.
+
+      .form-row
+        .form-group.col-md-6
+          label(for='email') Email
+          input#email.form-control(type='email' name='CustEmail' placeholder='Email' required='')
+          small#msg(style='display:none;') Enter Email here.
+
+        .form-group.col-md-3
+          label(for='hphone') Home/Cell Phone:
+          input#phone.form-control(type='tel' name='CustHomePhone' placeholder='123-456-7890' pattern='[0-9]{3}-[0-9]{3}-[0-9]{4}' required='')
+          small#msg(style='display:none;') Enter Home/Cell Phone here.
+
+        .form-group.col-md-3
+          label(for='bphone') Business/Cell Phone:
+          input#phone.form-control(type='tel' name='CustBusPhone' placeholder='123-456-7890' pattern='[0-9]{3}-[0-9]{3}-[0-9]{4}' required='')
+          small#msg(style='display:none;') Enter Business/Cell Phone here.
+
+      .form-row
+        .form-group.col-md-4
+          label(for='usrname') UserName
+          input#usrname.form-control(type='text' name='usrname' placeholder='UserName' required='')
+          small#msg(style='display:none;') Enter UserName here.
+
+        .form-group.col-md-4
+          label(for='passwd') Password
+          input#passwd.form-control(type='password' name='passwd' placeholder='Password' required='')
+          small#msg(style='display:none;') Enter Password here
+
+        .form-group.col-md-4
+          label(for='passwd2') Confirm Password
+          input#passwd2.form-control(type='password' name='passwd' placeholder='Confirm Password' required='')
+          small#msg(style='display:none;') Enter Same Password again here.
+      .form-row
+        .form-group.col-md-4
+        .form-group.col-md-4
+            button#res.btn.btn-primary(style='margin-bottom: 20px;' type='reset' onclick='Confirm_Buttons()') Reset            
+            button#sub.btn.btn-primary(style='margin-left: 4px; margin-bottom: 20px;' type='submit' onclick='Confirm_Buttons()') Submit            
+
+    include foot
+    
+    script.
+      LoadthePage();
