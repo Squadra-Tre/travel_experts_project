@@ -62,8 +62,9 @@ body {
 }
 
 /*Package Description Page*/
-.pkgimglg {
-  width: 100%;
+
+.Price {
+  text-align: center;
 }
 
 @media only screen and (max-width: 1000px) {
