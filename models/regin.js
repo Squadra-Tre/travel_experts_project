@@ -156,6 +156,6 @@ const bookSchema = new mongoose.Schema({
 })
 
 bookSchema.plugin(autoIncrement.plugin, { model: 'Booking', field: '_id', startAt: 149 });
-//regSchema.plugin(autoIncrement.plugin, { model: 'Booking', field: 'CustomerId', startAt: 149 });
+bookSchema.plugin(autoIncrement.plugin, { model: 'Booking', field: 'BookingId', startAt: 149 });
 
 module.exports.Booking = mongoose.model('Booking', bookSchema);
