@@ -13,8 +13,10 @@ router.get('/', function (req, res, next) {
 
 /* GET package page. */
 router.get("/packages", function (req, res, next) {
-  res.render("packg");
+  res.render("packages");
 });
+
+
 
 
 
@@ -73,8 +75,5 @@ router.post("/register", function (req, res, next) {
 
 module.exports = router;
 
-<<<<<<< HEAD
 //This is Cecilia
-=======
 /*Push Test*/
->>>>>>> 376d4228ef79049b09871b1ceb24e92b3902332c
