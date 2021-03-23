@@ -1,7 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;500&display=swap");
 
 body {
   font-family: "Poppins", sans-serif;
+  background-image: url(../images/plane.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  font-weight: 200;
 }
 .pkgimg {
   width: 100%;
@@ -16,6 +21,8 @@ body {
   border-radius: 10px;
   background-color: rgb(38, 70, 83);
   margin: 15px;
+  border: 2px solid rgb(103, 127, 136);
+  font-weight: 300;
 }
 .button:hover {
   -webkit-box-shadow: 5px 5px 3px 3px rgba(0, 0, 0, 0.3);
@@ -34,6 +41,7 @@ body {
   margin-left: 70px;
   margin-bottom: 20px;
   margin-top: 15px;
+  font-weight: 500;
 }
 
 .title {
@@ -42,6 +50,7 @@ body {
   font-size: 40px;
   margin-top: 20px;
   color: white;
+  font-weight: 500;
 }
 
 .desc {
@@ -49,6 +58,7 @@ body {
   padding-top: 25px;
   font-size: 25px;
   color: white;
+  font-weight: 300;
 }
 
 .coldesc {
@@ -57,8 +67,10 @@ body {
 
 .pkgfont {
   text-align: center;
-  font-size: 30px;
+  font-size: 40px;
   font-weight: bold;
+  padding: 30px;
+  font-weight: 500;
 }
 
 /*Package Description Page*/

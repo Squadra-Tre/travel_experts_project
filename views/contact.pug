@@ -1,0 +1,123 @@
+extends layout
+
+block othlink
+  
+  title CONTACTS
+  meta(name='viewport' content='width=device-width, initial-scale=1')
+  // Style for Contacts
+  script(src='/public/javascripts/button.js')
+  style.
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+    body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    }
+    html {
+    box-sizing: border-box;
+    }
+    *,
+    *:before,
+    *:after {
+    box-sizing: inherit;
+    }
+    .column {
+    float: left;
+    width: 33.3%;
+    margin-bottom: 16px;
+    padding: 0 8px;
+    }
+    .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 8px;
+    border: 1px solid black ;
+    }
+    .about-section {
+    padding: 50px;
+    text-align: center;
+    background-color: #474e5d;
+    color: white;
+    }
+    .container {
+    padding: 0 16px;
+    }
+    .container::after,
+    .row::after {
+    content: "";
+    clear: both;
+    display: table;
+    }
+    .title {
+    color: gray;
+    }
+    .button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    }
+    .button:hover {
+    background-color: #555;
+    }
+    @media screen and (max-width: 650px) {
+    .column {
+    width: 100%;
+    display: block;
+    }
+    }
+    
+    body,
+    html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    }
+    * {
+    box-sizing: border-box;
+    }
+    .bg-image {
+    background-image: url("/public/images/travel3.jpg");
+    
+    height: 20%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+    
+    #reg {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-60%, -60%);
+    }
+    .formreg {
+    color: white;
+    }
+
+
+block content 
+    .bg-image
+    .about-section
+      h1 CONTACT OUR TEAM
+      p Best team to provide support in your journey .
+      p Provide Best Prices and Packages.
+    h2(style='text-align:center') Our Team
+
+    .row
+      each agent in agents 
+        .column
+          .card
+            .container
+              h2=agent.AgtFirstName
+              h2= agent.AgtLastName
+              h4.title= agent.AgtPosition
+              h5.title= agent.AgtEmail
+              h5.title= agent.AgtBusPhone
+              button.button 
+                a(href= "mailto:agent.AgtEmail" style='color: white;' )
+                | Contact
+                          
