@@ -107,17 +107,16 @@ block content
       p Provide Best Prices and Packages.
     h2(style='text-align:center') Our Team
 
-    div(class='row row-cols-1 row-cols-md-3')
+    .row
       each agent in agents 
-        div(class='col mb-4')
-          div(class='card h-100')
-            div(class='card-body')
+        .column
+          .card
+            .container
               h2=agent.AgtFirstName
               h2= agent.AgtLastName
               h4.title= agent.AgtPosition
               h5.title= agent.AgtEmail
               h5.title= agent.AgtBusPhone
-              button(class='btn btn-primary text-center') 
+              button.button 
                 a(href= "mailto:agent.AgtEmail" style='color: white;' )
-                | Contact
-                          
+                | Contact 
