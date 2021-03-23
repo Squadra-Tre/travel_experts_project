@@ -2,6 +2,10 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  background-image: url(../images/plane.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 .pkgimg {
   width: 100%;
@@ -16,6 +20,7 @@ body {
   border-radius: 10px;
   background-color: rgb(38, 70, 83);
   margin: 15px;
+  border: 2px solid rgb(103, 127, 136);
 }
 .button:hover {
   -webkit-box-shadow: 5px 5px 3px 3px rgba(0, 0, 0, 0.3);
@@ -57,8 +62,9 @@ body {
 
 .pkgfont {
   text-align: center;
-  font-size: 30px;
+  font-size: 40px;
   font-weight: bold;
+  padding: 30px;
 }
 
 /*Package Description Page*/
