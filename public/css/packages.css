@@ -10,7 +10,6 @@ body {
 }
 .pkgimg {
   width: 100%;
-  border-radius: 10px;
   margin-top: 3px;
   margin-left: 3px;
   margin-bottom: 3px;
@@ -18,16 +17,15 @@ body {
   box-shadow: 2px 2px 3px #000000bd;
 }
 .button {
-  border-radius: 10px;
   background-color: rgb(38, 70, 83);
   margin: 15px;
-  border: 2px solid rgb(103, 127, 136);
+  border: 2px solid rgb(38, 70, 83);
   font-weight: 300;
   color: white;
 }
 .button:hover {
   -webkit-box-shadow: 5px 5px 3px 3px rgba(0, 0, 0, 0.3);
-  box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.3);
+  box-shadow: 3px 3px 5px #000000bd;
 }
 .price {
   background-color: rgb(42, 157, 143);
@@ -84,6 +82,7 @@ body {
   background-color: white;
   padding: 40px;
   margin-top: 50px;
+  box-shadow: 3px 3px 8px #000000bd;
 }
 .pkgimglg {
   max-height: 100%;
