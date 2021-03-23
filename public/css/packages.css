@@ -17,11 +17,12 @@ body {
   box-shadow: 2px 2px 3px #000000bd;
 }
 .button {
-  background-color: rgb(38, 70, 83);
+  background-color: rgb(51, 93, 109);
   margin: 15px;
-  border: 2px solid rgb(38, 70, 83);
+  border: 2px solid rgb(51, 93, 109);
   font-weight: 300;
   color: white;
+  border-radius: 3px;
 }
 .button:hover {
   -webkit-box-shadow: 5px 5px 3px 3px rgba(0, 0, 0, 0.3);
@@ -79,14 +80,16 @@ body {
 }
 
 .details {
-  background-color: white;
+  background-color: rgb(51, 93, 109);
   padding: 40px;
   margin-top: 50px;
   box-shadow: 3px 3px 8px #000000bd;
+  color: white;
+  border-radius: 3px;
 }
 .pkgimglg {
   max-height: 100%;
-  box-shadow: 3px 3px 12px #00000069;
+  box-shadow: 2px 2px 7px #00000069;
 }
 
 @media only screen and (max-width: 1000px) {
