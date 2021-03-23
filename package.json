@@ -12,12 +12,12 @@
     "express": "^4.17.1",
     "mongodb": "^3.6.5",
     "mongoose": "^5.12.1",
-    "mongoose-auto-increment": "^5.0.1",
     "morgan": "~1.9.1",
     "pug": "^3.0.2"
   },
   "devDependencies": {
     "bower": "^1.8.12",
+    "mongoose": "^5.12.2",
     "nodemon": "^2.0.7"
   }
 }
