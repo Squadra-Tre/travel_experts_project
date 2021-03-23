@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;500&display=swap");
 
 body {
   font-family: "Poppins", sans-serif;
@@ -6,6 +6,7 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  font-weight: 200;
 }
 .pkgimg {
   width: 100%;
@@ -40,7 +41,7 @@ body {
   margin-left: 70px;
   margin-bottom: 20px;
   margin-top: 15px;
-  font-weight: 300;
+  font-weight: 500;
 }
 
 .title {
@@ -49,7 +50,7 @@ body {
   font-size: 40px;
   margin-top: 20px;
   color: white;
-  font-weight: 300;
+  font-weight: 500;
 }
 
 .desc {
@@ -69,7 +70,7 @@ body {
   font-size: 40px;
   font-weight: bold;
   padding: 30px;
-  font-weight: 300;
+  font-weight: 500;
 }
 
 /*Package Description Page*/
