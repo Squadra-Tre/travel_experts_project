@@ -15,25 +15,56 @@ block othlink
     script(src='/js/myjsscript.js')
 
 block content  
-    //header(style='width:50%;')
-    //  h5.logo-text= hdlogo
-    //  #{hdimg}      
-  
-    form#regform(method='POST' action='/users/book')   
-      
-      h1(style='text-align:center;')            
-          strong Book a package
     
+    form#regform(method='POST' action='/users/book')
+
       .form-row
+        .form-group.col-md-2
+          label(for="sign") Sign in
+          input.form-control-plaintext(name="signin" type="text")
+        .form-group.col-md-2
+          label(for="username") Username
+          input#log.form-control-plaintext(name="userid" placeholder="Username" type="text")
         .form-group.col-md-4
-          label(for='currdate') Date:
+          label(for="password") Password
+          input#log.form-control(name="passwd" type="password" placeholder="*******")
+        .form-group.col-md-4
+          button.btn.btn-primary Log In    
+
+      h1(style='text-align:center;')            
+          strong Book a #{pack.PkgDesc}
+      p Begin: #{pack.PkgStartDate}
+      p End: #{pack.PkgEndDate}
+      p Price: $#{pack.PkgBasePrice}
+
+
+      .form-row      
+        .form-group.col-md-4
+          label(for='currdate') Date of Booking:
           input#currdate.form-control(type='date' name='BookingDate' placeholder='yyyy-mm-dd' required='')
-          small#msg(style='display:none;') Enter Current Date.
+          small#msg(style='display:none;') Enter Date booking here.
 
         .form-group.col-md-3
           label(for='travelcnt') No. of Traveller:
           input#travelcnt.form-control(type='text' name='TravelerCount' required='')
           small#msg(style='display:none;') Enter No. of Traveller here.
+
+      .form-row      
+        .form-group.col-md-5
+          label(for='depart') From:
+          input#depart.form-control(type='test' name='Departure' placeholder='From' required='')
+          small#msg(style='display:none;') Enter City of Departure.
+
+        .form-group.col-md-5
+          label(for='arriv') To:
+          input#arrive.form-control(type='test' name='Arrival' placeholder='To' required='')
+          small#msg(style='display:none;') Enter City of Arrival.
+
+          input(style='display:none' name='BookingNo' value='SWSW')
+          input(style='display:none;' name='CustomerId' value="11")
+          input(style='display:none;' name='TripTypeId' value="21")
+          input(style='display:none;' name='PackageId' value="111")
+          
 
       .form-row
         .form-group.col-md-4

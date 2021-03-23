@@ -11,12 +11,14 @@ router.get('/', function (req, res, next) {
   res.send('respond with a resource');
 });
 
+
 /* GET package page. */
 router.get('/packages', function (req, res, next) {
   res.render('packages');
 });
 
 
+// Author: Cecilia Santiago
 /* GET package page. */
 /*router.get("/packages", function (req, res, next) {
   Package.find((err, res1) => {
@@ -24,29 +26,25 @@ router.get('/packages', function (req, res, next) {
   });
 });*/
 
-
+// Author: Cecilia Santiago
 /* GET register page. */
 router.get("/register", function (req, res, next) {
   res.render("customer");
 });
 
-
-/* GET one  package. */
+// Author: Cecilia Santiago
+/* GET one  package */
 router.get("/book/:prodid", function (req, res, next) {
   Package.findOne({ PackageId: req.params.prodid }, (err, pkg) => {
-
-    /* GET Register page. */
-    //router.get("/register", function (req, res, next) {
-    //Package.findOne((err, package) => {
     if (err) {
       return res.send(500, err);
     }
     console.log('This is the package:', pkg);
-    res.render("book", { pkg });
+    res.render("book", { pack: pkg });
   });
 });
 
-
+// Author: Cecilia Santiago
 /* POST Register page. */
 router.post("/register", function (req, res, next) {
   const myregist = new Customer(req.body);
@@ -58,74 +56,17 @@ router.post("/register", function (req, res, next) {
   });
 })
 
+// Author: Cecilia Santiago
 /* POST Booking page. */
-/*const getbooking = new Booking(req.body);
-getbooking.save({
-  $addFields: {
-    BookingNo: "WWWW", CustomerId: myregist.CustomerId, TripTypeId: '', PackageId: ''
-  }
-}, (err2, resb) => {
-  console.log('Booking is saved in', resb);
-  if (err2) {
-    console.log(err2);
-  }
-})*/
-
-module.exports = router;
-
-
-/* GET booking page. */
-/*router.get("/book", function (req, res, next) {
-  res.render("book");
-});
-*/
-
-/* POST Booking page. */
-/*router.post("/book", function (req, res, next) {
-  const myregist = new Customer(req.body);
+router.post("/book", function (req, res, next) {
   const getbooking = new Booking(req.body);
-    const getbooking = new Booking(req.body);
-  getbooking.insert({ BookingNo: "WWWW", CustomerId: myregist.CustomerId, TripTypeId: '', PackageId: '' })
-  getbooking.save({
-    $addFields: {
-      BookingNo: "WWWW", CustomerId: myregist.CustomerId, TripTypeId: '', PackageId: ''
-    }
-  }, (err2, resb) => {
-    console.log('Booking is saved in', resb);
+  getbooking.save((err2, resb) => {
+    console.log('Booking is saved in');
     if (err2) {
       console.log(err2);
     }
+    res.render("thankyou")
   })
-})*/
+})
 
-/*res.render("thankyou", {
-  varbody: "div",
-  varbackimg: "div",
-  result
-});*/
-
-
-/* GET a Package */
-/*router.get("/:package", function (req, res, next) {
-  Package.findOne({ PackageId: req.params.package }, (err, result) => {
-    if (err) { //res.send(err);
-      console.log(err);
-      //console.log(result);
-    };
-  });
-})*/
-
-/* get the click data from the database
-router.get('/clicks', (req, res) => {
-  const myregist = new Customer(req.body);
-  myregist('clicks').find().toArray((err, result) => {
-    if (err)
-      return console.log(err);
-
-    res.send(result);
-  });
-});
-
-
-//This is Cecilia
-/*Push Test*/
+module.exports = router;

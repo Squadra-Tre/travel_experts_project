@@ -3,6 +3,7 @@
 */
 
 const mongoose = require('mongoose'), autoIncrement = require('mongoose-auto-increment');
+const uniqueValidator = require("mongoose-unique-validator");
 
 //mongoose.connect('mongodb://localhost:27017/newdb',
 mongoose.connect('mongodb+srv://travel-expert:travel1234@cluster0.orc02.mongodb.net/travelexperts_mongodb_json_collections?authSource=admin&replicaSet=atlas-71fnej-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true',
@@ -85,17 +86,27 @@ const regSchema = new mongoose.Schema({
     userid: {
         type: String,
         trim: true,
-        required: [true, 'User Name cannot be empty']
+        required: [true, 'User Name cannot be empty'],
+        unique: 'The userid must be unique.',
+        lowercase: true
     },
 
     passwd: {
         type: String,
         trim: true,
-        required: [true, 'Password cannot be empty']
-    },
+        required: [true, 'Password cannot be empty'],
+        validate: {
+            validator: function (v) {
+                return /(?=(.*[0-9]))((?=.*[A-Za-z0-9])(?=.*[A-Z])(?=.*[a-z]))^.{6,}$/.test(v);
+            },
+            message: props =>
+                `Password should have 1 lowercase letter, 1 uppercase letter, 1 number, and be at least 6 characters.`
+        }
+    }
 
-    versionKey: false,
 })
+
+regSchema.plugin(uniqueValidator);
 
 // autoincrement _id and CustomerId by 1
 regSchema.plugin(autoIncrement.plugin, { model: 'Customer', field: '_id', startAt: 149 });
@@ -110,7 +121,31 @@ module.exports.Customer = mongoose.model('Customer', regSchema);
 const packSchema = new mongoose.Schema({
     PackageId: {
         type: Number
+    },
+    PkgName: {
+        type: String
+    },
+
+    PkgStartDate: {
+        type: Date
+    },
+
+    PkgEndDate: {
+        type: Date
+    },
+
+    PkgDesc: {
+        type: String
+    },
+
+    PkgBasePrice: {
+        type: String
+    },
+
+    Img: {
+        type: String
     }
+
 })
 
 
@@ -129,7 +164,8 @@ const bookSchema = new mongoose.Schema({
 
     BookingDate: {
         type: Date,
-        required: false
+        default: Date.now,
+        required: true
     },
 
     BookingNo: {
@@ -152,10 +188,19 @@ const bookSchema = new mongoose.Schema({
 
     PackageId: {
         type: Number
+    },
+
+    Departure: {
+        type: String
+    },
+
+    Arrival: {
+        type: String
     }
 })
 
-bookSchema.plugin(autoIncrement.plugin, { model: 'Booking', field: '_id', startAt: 149 });
+// autoincrement _id and BookingId by 1
+bookSchema.plugin(autoIncrement.plugin, { model: 'Booking', field: '_id', startAt: 3000 });
 bookSchema.plugin(autoIncrement.plugin, { model: 'Booking', field: 'BookingId', startAt: 2001 });
 
 module.exports.Booking = mongoose.model('Booking', bookSchema);

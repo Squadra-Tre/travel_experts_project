@@ -1,6 +1,6 @@
 
 /*  Author: Cecilia Santiago     
-    Styles used for Customer form
+    Styles used for Customer form and Booking form
 */
 
 .back-image {
@@ -12,44 +12,29 @@
     
 }
 
-/*.img-logor {
-    margin-left: 4%;    
-    border: 2px solid maroon;   
-}*/
-
-
-.logo-text { 
-    font-family: 'Akaya Telivigala', cursive;
-    text-align:center; 
-    width:15%;    
-    font-size: 1vw; 
-    color:maroon;         
-    white-space: nowrap;
-    margin-left: 4%;  
-    margin-top: 3%;
-}
 
 #regform {
-    font-family: 'Abel', sans-serif;   
-    /*color:whitesmoke;*/
-    color:blue;    
+    font-family: 'Abel', sans-serif;       
+    color:rgb(20, 63, 65);    
     width:50%;
     align-items: center;    
     margin:auto;
     font-weight:bold;
-    /*margin-left: 5%;*/
+    padding: 3%;    
     margin-top:5%;
+    background-color:rgb(202, 198, 198);
  
 }
 
+/* for input boxes */
 #fname, #lname, #addr1,
 #addr2, #email, #city,
 #cntry, #hphone, #bphone,
 #prov, #post, #phone,
 #bday, #usrname, #passwd,
-#passwd2, #currdate, #travelcnt{
-    background:rgb(234, 245, 248);
- 
+#currdate, #travelcnt, #log,
+#depart, #arrive{
+    background:rgb(234, 245, 248); 
 }
 
 #msg{

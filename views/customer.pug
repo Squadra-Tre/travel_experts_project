@@ -14,11 +14,7 @@ block othlink
     // JavaScript link
     script(src='/js/myjsscript.js')
 
-block content  
-    //header(style='width:50%;')
-    //  h5.logo-text= hdlogo
-    //  #{hdimg}   
-    
+block content      
   
     form.back-image#regform(method='POST' action='/users/register')   
       
@@ -51,21 +47,7 @@ block content
           label(for='prov') Prov/State
           input#prov.form-control(list='options' name='CustProv' placeholder='' required='')
           small#msg(style='display:none;') Enter Province here.
-          //datalist#options            
-            option(value='AB')
-            option(value='BC')
-            option(value='MB')
-            option(value='NB')
-            option(value='NL')
-            option(value='NT')
-            option(value='NS')
-            option(value='NU')
-            option(value='ON')
-            option(value='PE')
-            option(value='QC')
-            option(value='SK')
-            option(value='YT')          
-
+         
         .form-group.col-md-2
           label(for='post') Postal
           input#post.form-control(type='text' name='CustPostal' placeholder='H1H 0H0' pattern='^[A-Z]\\d[A-Z] ?\\d[A-Z]\\d$' required='')
@@ -93,17 +75,6 @@ block content
           input#email.form-control(type='email' name='CustEmail' placeholder='Email' required='')
           small#msg(style='display:none;') Enter Email here.
 
-      //.form-row
-        .form-group.col-md-4
-          label(for='currdate') Date of Travel:
-          input#currdate.form-control(type='date' name='BookingDate' placeholder='yyyy-mm-dd' required='')
-          small#msg(style='display:none;') Enter Current Date.
-
-        .form-group.col-md-3
-          label(for='travelcnt') No. of Traveller:
-          input#travelcnt.form-control(type='text' name='TravelerCount' required='')
-          small#msg(style='display:none;') Enter No. of Traveller here.
-
       .form-row
         .form-group.col-md-4
           label(for='usrname') UserName
@@ -115,10 +86,6 @@ block content
           input#passwd.form-control(type='password' name='passwd' placeholder='Password' required='')
           small#msg(style='display:none;') Enter Password here
 
-        .form-group.col-md-4
-          label(for='passwd2') Confirm Password
-          input#passwd2.form-control(type='password' name='passwd2' placeholder='Confirm Password' required='')
-          small#msg(style='display:none;') Enter Same Password again here.
       .form-row
         .form-group.col-md-4
         .form-group.col-md-4
