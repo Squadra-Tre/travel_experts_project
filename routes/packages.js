@@ -1,6 +1,5 @@
 var express = require('express');
 var router = express.Router();
-var mongo = require('mongodb');
 const pack = require('../models/packages');
 
 const mongoose = require('mongoose')
@@ -22,7 +21,6 @@ router.get('/', function(req, res, next) {
 router.get('/details', function(req, res, next) {
     res.render('details');
 });
-
 
 
 module.exports = router;

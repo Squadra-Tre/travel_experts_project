@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300&display=swap");
 
 body {
   font-family: "Poppins", sans-serif;
@@ -21,6 +21,7 @@ body {
   background-color: rgb(38, 70, 83);
   margin: 15px;
   border: 2px solid rgb(103, 127, 136);
+  font-weight: 300;
 }
 .button:hover {
   -webkit-box-shadow: 5px 5px 3px 3px rgba(0, 0, 0, 0.3);
@@ -39,6 +40,7 @@ body {
   margin-left: 70px;
   margin-bottom: 20px;
   margin-top: 15px;
+  font-weight: 300;
 }
 
 .title {
@@ -47,6 +49,7 @@ body {
   font-size: 40px;
   margin-top: 20px;
   color: white;
+  font-weight: 300;
 }
 
 .desc {
@@ -54,6 +57,7 @@ body {
   padding-top: 25px;
   font-size: 25px;
   color: white;
+  font-weight: 300;
 }
 
 .coldesc {
@@ -65,6 +69,7 @@ body {
   font-size: 40px;
   font-weight: bold;
   padding: 30px;
+  font-weight: 300;
 }
 
 /*Package Description Page*/

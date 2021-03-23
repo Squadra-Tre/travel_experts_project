@@ -1,16 +1,15 @@
-doctype html
+extends layout
 
-
-head
+block othlink
+  
   title CONTACTS
-  // Style for Navigation Bar
- 
   meta(name='viewport' content='width=device-width, initial-scale=1')
   // Style for Contacts
   script(src='/public/javascripts/button.js')
   style.
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
     body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     }
     html {
@@ -75,7 +74,7 @@ head
     html {
     height: 100%;
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Poppins', sans-serif;
     }
     * {
     box-sizing: border-box;
@@ -99,28 +98,26 @@ head
     color: white;
     }
 
-// List for navigation bar
 
-// body for contact
-body 
-  .bg-image
-  .about-section
-    h1 CONTACT OUR TEAM
-    p Best team to provide support in your journey .
-    p Provide Best Prices and Packages.
-  h2(style='text-align:center') Our Team
+block content 
+    .bg-image
+    .about-section
+      h1 CONTACT OUR TEAM
+      p Best team to provide support in your journey .
+      p Provide Best Prices and Packages.
+    h2(style='text-align:center') Our Team
 
-  .row
-    each agent in agents 
-      .column
-        .card
-          .container
-            h2=agent.AgtFirstName
-            h2= agent.AgtLastName
-            h4.title= agent.AgtPosition
-            h5.title= agent.AgtEmail
-            h5.title= agent.AgtBusPhone
-            button.button 
-             a(href= "mailto:agent.AgtEmail" style='color: white;' )
-              | Contact
-                        
+    .row
+      each agent in agents 
+        .column
+          .card
+            .container
+              h2=agent.AgtFirstName
+              h2= agent.AgtLastName
+              h4.title= agent.AgtPosition
+              h5.title= agent.AgtEmail
+              h5.title= agent.AgtBusPhone
+              button.button 
+                a(href= "mailto:agent.AgtEmail" style='color: white;' )
+                | Contact
+                          
