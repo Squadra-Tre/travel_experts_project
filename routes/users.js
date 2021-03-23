@@ -13,19 +13,32 @@ router.get('/', function (req, res, next) {
 
 /* GET package page. */
 router.get("/packages", function (req, res, next) {
-  res.render("packg");
+  res.render("packages");
 });
 
 
-/* GET Register page. */
+/* GET package page. */
+/*router.get("/packages", function (req, res, next) {
+  Package.find((err, res1) => {
+    res.render("packg", { packge: res1 });
+  });
+});*/
+
+
+/* GET register page. */
 router.get("/register", function (req, res, next) {
-  Package.findOne((err, package) => {
+  res.render("customer");
+});
+
+
+/* GET one  package. */
+router.get("/book/:prodid", function (req, res, next) {
+  Package.findOne({ PackageId: req.params.prodid }, (err, pkg) => {
     if (err) {
       return res.send(500, err);
     }
-    console.log('This is the package:', package);
-    res.render("customer", { package });
-
+    console.log('This is the package:', pkg);
+    res.render("book", { pkg });
   });
 });
 
@@ -40,7 +53,33 @@ router.post("/register", function (req, res, next) {
     }
   })
 
-  /* POST Booking page. */
+})
+
+/* POST Booking page. */
+/*const getbooking = new Booking(req.body);
+getbooking.save({
+  $addFields: {
+    BookingNo: "WWWW", CustomerId: myregist.CustomerId, TripTypeId: '', PackageId: ''
+  }
+}, (err2, resb) => {
+  console.log('Booking is saved in', resb);
+  if (err2) {
+    console.log(err2);
+  }
+})*/
+
+module.exports = router;
+
+
+/* GET booking page. */
+/*router.get("/book", function (req, res, next) {
+  res.render("book");
+});
+*/
+
+/* POST Booking page. */
+/*router.post("/book", function (req, res, next) {
+  const myregist = new Customer(req.body);
   const getbooking = new Booking(req.body);
   getbooking.save({
     $addFields: {
@@ -52,25 +91,7 @@ router.post("/register", function (req, res, next) {
       console.log(err2);
     }
   })
-
-  /*getbooking.update({
-    $addFields: {
-      BookingNo: "WWWW", CustomerId: myregist.CustomerId, TripTypeId: '', PackageId: ''
-    }
-  })*/
-})
-
-
-/*getbooking.save({
-  BookingNo: "WWWW", CustomerId: myregist.CustomerId, TripTypeId: '', PackageId: ''
-}, (err2, resb) => {
-  console.log('Booking is saved in', resb);
-  if (err2) {
-    console.log(err2);
-  }
-})
-});*/
-
+})*/
 
 /*res.render("thankyou", {
   varbody: "div",
@@ -89,7 +110,17 @@ router.post("/register", function (req, res, next) {
   });
 })*/
 
-module.exports = router;
+/* get the click data from the database
+router.get('/clicks', (req, res) => {
+  const myregist = new Customer(req.body);
+  myregist('clicks').find().toArray((err, result) => {
+    if (err)
+      return console.log(err);
+
+    res.send(result);
+  });
+});
+
 
 //This is Cecilia
 /*Push Test*/
