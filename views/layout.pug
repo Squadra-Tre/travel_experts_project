@@ -7,6 +7,8 @@ html
         script(src="https://kit.fontawesome.com/af3a69f2b2.js" crossorigin="anonymous")
         link(rel='stylesheet' href='/bower_components/bootstrap/dist/css/bootstrap.css')
         link(rel='stylesheet' href='/css/style.css')
+        script(src='/bower_components/jquery/dist/jquery.js')
+        script(src='/bower_components/bootstrap/dist/js/bootstrap.js')
         script(src='/js/main.js')
         title Travel Express 
 
@@ -17,7 +19,7 @@ html
         nav.navbar.navbar-expand-md.navbar-dark.sticky-top 
             .container-fluid 
                 a(class='navbar-brand' href='/')
-                    img(src='#' width='6%')
+                    img(src='/images/navlogo.png' width='33%')
                     |Travel Experts
                 button(class='navbar-toggler' type='button' data-toggle='collaspse' data-target='#navbarResponsive')
                     span(class='navbar-toggler-icon')
@@ -32,7 +34,7 @@ html
                         li(class='nav-item')
                             a(class='nav-link' href='/users/register') Register
                         li(class='nav-item')
-                            a(class='nav-link' href='/users/packages') Packages
+                            a(class='nav-link' href='/packages') Packages
         .container-fluid 
             block content 
             br
@@ -42,7 +44,7 @@ html
                 div(class='row text-center')
                     div(class="col-md-4")
                         hr(class='light')
-                        img(src='#' width='10%')
+                        img(src='/images/navlogo.png' width='20%')
                         hr(class='light')
                         p 555-555-5555
                         p email@myemail.com
@@ -66,5 +68,4 @@ html
                     div(class='col-12')
                         hr(class='light-100')
                         h5 &copy; Travel Experts
-        script(src='/bower_components/jquery/dist/jquery.js')
-        script(src='/bower_components/bootstrap/dist/js/bootstrap.js')
+        

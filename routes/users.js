@@ -12,8 +12,8 @@ router.get('/', function (req, res, next) {
 });
 
 /* GET package page. */
-router.get("/packages", function (req, res, next) {
-  res.render("packages");
+router.get('/packages', function (req, res, next) {
+  res.render('packages');
 });
 
 
@@ -34,6 +34,10 @@ router.get("/register", function (req, res, next) {
 /* GET one  package. */
 router.get("/book/:prodid", function (req, res, next) {
   Package.findOne({ PackageId: req.params.prodid }, (err, pkg) => {
+
+    /* GET Register page. */
+    //router.get("/register", function (req, res, next) {
+    //Package.findOne((err, package) => {
     if (err) {
       return res.send(500, err);
     }
@@ -51,8 +55,7 @@ router.post("/register", function (req, res, next) {
     if (err) { //res.send(err);
       console.log(err);
     }
-  })
-
+  });
 })
 
 /* POST Booking page. */
@@ -81,6 +84,8 @@ module.exports = router;
 /*router.post("/book", function (req, res, next) {
   const myregist = new Customer(req.body);
   const getbooking = new Booking(req.body);
+    const getbooking = new Booking(req.body);
+  getbooking.insert({ BookingNo: "WWWW", CustomerId: myregist.CustomerId, TripTypeId: '', PackageId: '' })
   getbooking.save({
     $addFields: {
       BookingNo: "WWWW", CustomerId: myregist.CustomerId, TripTypeId: '', PackageId: ''

@@ -2,9 +2,11 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var mongoose = require('mongoose');
 
 //init app
 var app = express();
+var packagesRouter = require('./routes/packages');
 
 //Middleware
 app.use(logger('dev'));
@@ -24,6 +26,7 @@ app.use('/', indexRouter);
 //Add Routes
 const usersRouter = require('./routes/users');
 app.use('/users', usersRouter);
+app.use('/packages', packagesRouter);
 
 //Start server
 const port = process.env.PORT || 3000;
