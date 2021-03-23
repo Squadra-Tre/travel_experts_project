@@ -3,11 +3,8 @@
 */
 
 const mongoose = require('mongoose'), autoIncrement = require('mongoose-auto-increment');
-<<<<<<< HEAD
 /*const uniqueValidator = require("mongoose-unique-validator");*/
-=======
 //const uniqueValidator = require("mongoose-unique-validator");
->>>>>>> 7bf1a838b1c9198af3988773d07fa4e09f64ea66
 
 //mongoose.connect('mongodb://localhost:27017/newdb',
 mongoose.connect('mongodb+srv://travel-expert:travel1234@cluster0.orc02.mongodb.net/travelexperts_mongodb_json_collections?authSource=admin&replicaSet=atlas-71fnej-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true',
@@ -110,11 +107,8 @@ const regSchema = new mongoose.Schema({
 
 })
 
-<<<<<<< HEAD
 /*regSchema.plugin(uniqueValidator);*/
-=======
 //regSchema.plugin(uniqueValidator);
->>>>>>> 7bf1a838b1c9198af3988773d07fa4e09f64ea66
 
 // autoincrement _id and CustomerId by 1
 regSchema.plugin(autoIncrement.plugin, { model: 'Customer', field: '_id', startAt: 149 });
