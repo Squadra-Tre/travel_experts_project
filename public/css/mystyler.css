@@ -3,15 +3,16 @@
     Styles used for Customer form
 */
 
-/*.back-image {
-    background-image: url("../images/Mayon_Volcano_1.jpg");  
+.back-image {
+    background-image: url("../images/IMG_20190731_0956162762.jpg");  
     background-position: center;
     background-repeat: no-repeat;
     background-size:cover;
     background-attachment:fixed;  
+    
 }
 
-.img-logor {
+/*.img-logor {
     margin-left: 4%;    
     border: 2px solid maroon;   
 }*/
@@ -31,12 +32,13 @@
 #regform {
     font-family: 'Abel', sans-serif;   
     /*color:whitesmoke;*/
-    color:blue;
+    color:blue;    
     width:50%;
     align-items: center;    
     margin:auto;
-    /*margin-left: 5%;
-    margin-top:5%;*/
+    font-weight:bold;
+    /*margin-left: 5%;*/
+    margin-top:5%;
  
 }
 

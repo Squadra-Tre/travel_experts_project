@@ -17,12 +17,13 @@ block othlink
 block content  
     //header(style='width:50%;')
     //  h5.logo-text= hdlogo
-    //  #{hdimg}      
+    //  #{hdimg}   
+    
   
-    form#regform(method='POST' action='/users/register')   
+    form.back-image#regform(method='POST' action='/users/register')   
       
       h1(style='text-align:center;')
-        strong Book a Package
+        strong Create an account 
         
       .form-row      
         .form-group.col-md-6
@@ -92,9 +93,9 @@ block content
           input#email.form-control(type='email' name='CustEmail' placeholder='Email' required='')
           small#msg(style='display:none;') Enter Email here.
 
-      .form-row
-        //.form-group.col-md-4
-          label(for='currdate') Date:
+      //.form-row
+        .form-group.col-md-4
+          label(for='currdate') Date of Travel:
           input#currdate.form-control(type='date' name='BookingDate' placeholder='yyyy-mm-dd' required='')
           small#msg(style='display:none;') Enter Current Date.
 
@@ -123,7 +124,6 @@ block content
         .form-group.col-md-4
             button#res.btn.btn-primary(style='margin-bottom: 20px;' type='reset' onclick='Confirm_Buttons()') Reset            
             button#sub.btn.btn-primary(style='margin-left: 4px; margin-bottom: 20px;' type='submit' onclick='Confirm_Buttons()') Submit
-
 
     script.
       LoadthePage();

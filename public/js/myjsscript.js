@@ -10,6 +10,29 @@ function Confirm_Buttons() {
     alert(txtconf);
 }
 
+
+/*function getPackage_Button() {
+
+    const pressed = document.getElementById('subp');
+
+    pressed.addEventListener("click", function () {
+        console.log('button was clicked');
+
+        fetch('/clicked', { method: 'GET' })
+            .then(function (response) {
+                if (response.ok) {
+                    console.log('click was recorded');
+                    return;
+                }
+                throw new Error('Request failed.');
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+    });
+}*/
+
+
 function mouseDescFocus(desc) {
     if (desc.children.length < 3) return;
     if (desc.children[2].tagName === 'SMALL')

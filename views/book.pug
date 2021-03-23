@@ -19,81 +19,13 @@ block content
     //  h5.logo-text= hdlogo
     //  #{hdimg}      
   
-    form#regform(method='POST' action='/users/register')   
+    form#regform(method='POST' action='/users/book')   
       
-      h1(style='text-align:center;')
-        strong Book a package #{package.PkgName}
-        
-      .form-row      
-        .form-group.col-md-6
-          label(for='fname') First Name
-          input#fname.form-control(type='text' name='CustFirstName' placeholder='First Name' required='')
-          small#msg(style='display:none;') Enter First Name here.
-
-        .form-group.col-md-6
-          label(for='lname') Last Name
-          input#lname.form-control(type='text' name='CustLastName' placeholder='Last Name' required='')
-          small#msg(style='display:none;') Enter Last Name here.
-
-      .form-group
-        label(for='addr1') Address
-        input#addr1.form-control(type='text' name='CustAddress' placeholder='1234 Main St' required='')
-        small#msg(style='display:none;') Enter Main address here.
-
+      h1(style='text-align:center;')            
+          strong Book a package
+    
       .form-row
         .form-group.col-md-4
-          label(for='city') City
-          input#city.form-control(type='text' name='CustCity' placeholder='City' required='')
-          small#msg(style='display:none;') Enter City here.
-
-        .form-group.col-md-2
-          label(for='prov') Prov/State
-          input#prov.form-control(list='options' name='CustProv' placeholder='' required='')
-          small#msg(style='display:none;') Enter Province here.
-          //datalist#options            
-            option(value='AB')
-            option(value='BC')
-            option(value='MB')
-            option(value='NB')
-            option(value='NL')
-            option(value='NT')
-            option(value='NS')
-            option(value='NU')
-            option(value='ON')
-            option(value='PE')
-            option(value='QC')
-            option(value='SK')
-            option(value='YT')          
-
-        .form-group.col-md-2
-          label(for='post') Postal
-          input#post.form-control(type='text' name='CustPostal' placeholder='H1H 0H0' pattern='^[A-Z]\\d[A-Z] ?\\d[A-Z]\\d$' required='')
-          small#msg(style='display:none;') Enter Postal here.
-
-      
-        .form-group.col-md-4
-          label(for='cntry') Country
-          input#cntry.form-control(type='text' name='CustCountry' placeholder='Country' required='')
-          small#msg(style='display:none;') Enter Country here.
-
-      .form-row
-        .form-group.col-md-3
-          label(for='hphone') Home/Cell Phone:
-          input#hphone.form-control(type='tel' name='CustHomePhone' placeholder='123-456-7890' pattern='[0-9]{3}-[0-9]{3}-[0-9]{4}' required='')
-          small#msg(style='display:none;') Enter Home/Cell Phone here.
-
-        .form-group.col-md-3
-          label(for='bphone') Bus/Cell Phone:
-          input#bphone.form-control(type='tel' name='CustBusPhone' placeholder='123-456-7890' pattern='[0-9]{3}-[0-9]{3}-[0-9]{4}')
-          small#msg(style='display:none;') Enter Business/Cell Phone here.
-
-        .form-group.col-md-6
-          label(for='email') Email
-          input#email.form-control(type='email' name='CustEmail' placeholder='Email' required='')
-          small#msg(style='display:none;') Enter Email here.
-
-      .form-row
-        //.form-group.col-md-4
           label(for='currdate') Date:
           input#currdate.form-control(type='date' name='BookingDate' placeholder='yyyy-mm-dd' required='')
           small#msg(style='display:none;') Enter Current Date.
@@ -105,23 +37,8 @@ block content
 
       .form-row
         .form-group.col-md-4
-          label(for='usrname') UserName
-          input#usrname.form-control(type='text' name='userid' placeholder='UserName' required='')
-          small#msg(style='display:none;') Enter UserName here.
-
         .form-group.col-md-4
-          label(for='passwd') Password
-          input#passwd.form-control(type='password' name='passwd' placeholder='Password' required='')
-          small#msg(style='display:none;') Enter Password here
-
-        .form-group.col-md-4
-          label(for='passwd2') Confirm Password
-          input#passwd2.form-control(type='password' name='passwd2' placeholder='Confirm Password' required='')
-          small#msg(style='display:none;') Enter Same Password again here.
-      .form-row
-        .form-group.col-md-4
-        .form-group.col-md-4
-            button#res.btn.btn-primary(style='margin-bottom: 20px;' type='reset' onclick='Confirm_Buttons()') Reset            
+            button#res.btn.btn-primary(style='margin-bottom: 20px;' type='reset' onclick='Confirm_Buttons()') Cancel            
             button#sub.btn.btn-primary(style='margin-left: 4px; margin-bottom: 20px;' type='submit' onclick='Confirm_Buttons()') Book            
 
     script.

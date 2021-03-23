@@ -1,6 +1,14 @@
 extends layout
 
+block othlink
+    // JavaScript link
+    script(src='/js/myjsscript.js')
+
 block content
     h1 This is a package
-    button#subp(type='submit')
-        a(href='/users/register') Submit
+    each pack in packge
+        button#subp(type='submit')
+            a(href='/users/book/' + pack.PackageId) Submit
+
+    //script.
+        LoadthePage();
