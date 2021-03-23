@@ -1,7 +1,7 @@
 var express = require('express');
 const database = require('mime-db');
-//const { Console } = require('node:console');
 var router = express.Router();
+
 const { Customer } = require('../models/regin');
 const { Package } = require('../models/regin');
 const { Booking } = require('../models/regin');

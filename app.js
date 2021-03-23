@@ -26,7 +26,9 @@ app.use('/', indexRouter);
 
 //Add Routes
 const usersRouter = require('./routes/users');
+const aboutRouter = require('./routes/about');
 app.use('/users', usersRouter);
+app.use('/about', aboutRouter);
 app.use('/packages', packagesRouter);
 app.use('/contact', contactRouter);
 
