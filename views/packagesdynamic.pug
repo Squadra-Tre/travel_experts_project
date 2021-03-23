@@ -11,11 +11,10 @@ block content
   .container-md.container-fluid
     p.pkgfont Select From One of Our Exciting Travel Packages!
     each package in packages
-      #package1.row.button(onclick='package();')
-        // Image Column
+      button.row.button.position-relative(type='submit')
+        a(class="stretched-link" href='/packages/details/' + package.PackageId)
         .col-lg-4.col-md-6.col-sm-12.p-2
           img.pkgimg(src=package.Img)
-        // Info
         .col-8.coldesc
           .row
             p.title #{package.PkgName}
@@ -24,3 +23,5 @@ block content
                 p #{package.PkgDesc}
             .row
               .price $#{package.PkgBasePrice}
+        
+                

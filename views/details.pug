@@ -3,27 +3,22 @@ extends layout
 block othlink
   link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl' crossorigin='anonymous')
   title Travel Packages
-  link(rel='stylesheet' href='../css/packages.css')
-  script(src='../js/buttons.js')
+  link(rel='stylesheet' href='/css/packages.css')
+  script(src='/js/buttons.js')
 
 block content
-    .container-md
+    .container-md.details
         .row.align-items-center.py-3
             .col
-                img.pkgimglg(src='../images/pkgs/australia-lg.png')
+                img.pkgimglg(src=pack.ImgLg)
             .col-sm
-                p.fs-1.text-wrap.fw-bold $6000
+                p.fs-1.text-wrap.fw-bold $#{pack.PkgBasePrice}
                 p Plus applicable fees and taxes
             .col-sm
-                button.btn.btn-primary.btn-lg(type='submit') Order
-        .row.fs-1.py-3.fw-bold Australian Adventure
+                a.btn.btn-primary.btn-lg(href='/users/book/' + pack.PackageId role='button') BOOK
+        .row.fs-1.py-3.fw-bold #{pack.PkgName}
         .row.text-wrap.py-3.fs-3
-            | Detailed description goes here. Detailed description goes here. Detailed
-            | description goes here. Detailed description goes here. Detailed
-            | description goes here. Detailed description goes here. Detailed
-            | description goes here. Detailed description goes here. Detailed
-            | description goes here. Detailed description goes here. Detailed
-            | description goes here. Detailed description goes here. Detailed
-            | description goes here. Detailed description goes here.
+            p #{pack.PkgDesc}
         .row.text-wrap.py-5.fs-4.fw-bold
-            | Packages Offered From 01-01-2021 to 01-14-2021
+            p From #{pack.PkgStartDate} 
+            p To #{pack.PkgEndDate}

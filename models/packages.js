@@ -26,6 +26,9 @@ const packSchema = new mongoose.Schema({
     Img: {
         type: String,
     },
+    ImgLg: {
+        type: String,
+    },
 
 });
 

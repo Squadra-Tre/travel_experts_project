@@ -12,19 +12,14 @@ router.get('/', function (req, res, next) {
 });
 
 
-/* GET package page. */
-router.get('/packages', function (req, res, next) {
-  res.render('packages');
-});
-
 
 // Author: Cecilia Santiago
 /* GET package page. */
-/*router.get("/packages", function (req, res, next) {
+router.get("/packages", function (req, res, next) {
   Package.find((err, res1) => {
     res.render("packg", { packge: res1 });
   });
-});*/
+});
 
 // Author: Cecilia Santiago
 /* GET register page. */

@@ -15,12 +15,21 @@ router.get('/', function(req, res, next) {
         console.log(packages);
         res.render('packagesdynamic', {packages});
     });
-});    
-
-/* Render Dynamic Package Detail Page */
-router.get('/details', function(req, res, next) {
-    res.render('details');
 });
 
+/* Render Dynamic Package Detail Page */
+/*router.get('/details', function(req, res, next) {
+    res.render('details');
+});*/
+
+router.get("/details/:prodid", function (req, res, next) {
+    pack.findOne({ PackageId: req.params.prodid }, (err, pkg) => {
+      if (err) {
+        return res.send(500, err);
+      }
+      console.log('This is the package:', pkg);
+      res.render("details", { pack : pkg });
+    });
+  });
 
 module.exports = router;
