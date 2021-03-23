@@ -1,136 +1,139 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
 
-
-html, body {
-    height: 100%;
-    width: 100%;
-    font-family: 'Poppins', sans-serif;
-    color: #222;
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: "Poppins", sans-serif !important;
+  color: #222;
 }
 nav {
-    background-color:#264653;
-    color: #daf2dc;
+  background-color: #264653 !important;
+  color: #daf2dc !important;
+  font-size: 17px !important;
 }
 .navbar {
-    padding: .8rem;
+  padding: 0.8rem !important;
 }
 .navbar-nav li {
-    padding-right: 20px;
+  padding-right: 20px !important;
 }
 .nav-link {
-    font-size: 1.1em !important;
+  font-size: 1.1em !important;
 }
 .carousel-caption {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 .carousel-caption h1 {
-    text-shadow: 1px 1px 15px #000;
+  text-shadow: 1px 1px 15px #000;
 }
 .carousel-caption h3 {
-    font-weight: 500;
-    text-shadow: 1px 1px 10px #000;
-    padding-bottom: 1rem;
+  font-weight: 500;
+  text-shadow: 1px 1px 10px #000;
+  padding-bottom: 1rem;
 }
 .btn-primary {
-    background-color: #2A9D8F;
-    border: 1px solid #2A9D8F;
+  background-color: #2a9d8f;
+  border: 1px solid #2a9d8f;
 }
 .btn-primary:hover {
-    background-color: #1E7167;
-    border: 1px solid #1E7167;
+  background-color: #1e7167;
+  border: 1px solid #1e7167;
 }
 .btn-secondary {
-    background-color: #F29040;
-    border: 1px solid #F29040;
+  background-color: #f29040;
+  border: 1px solid #f29040;
 }
 .btn-secondary:hover {
-    background-color: #E45C3A;
-    border: 1px solid #E45C3A;
+  background-color: #e45c3a;
+  border: 1px solid #e45c3a;
 }
 .jumbotron {
-    padding: 1rem;
-    border-radius: 0;
+  padding: 1rem;
+  border-radius: 0;
 }
 .padding {
-    padding-bottom: 2rem;
+  padding-bottom: 2rem;
 }
 .welcome {
-    width: 75%;
-    margin: 0 auto;
-    padding-top: 2rem;
+  width: 75%;
+  margin: 0 auto;
+  padding-top: 2rem;
 }
 .welcome hr {
-    border-top: 2px solid #b4b4b4;
-    width: 95%;
-    margin-top: .3rem;
-    margin-bottom: 1rem;
+  border-top: 2px solid #b4b4b4;
+  width: 95%;
+  margin-top: 0.3rem;
+  margin-bottom: 1rem;
 }
 .fa-plane-departure {
-    color: #E9C46A
+  color: #e9c46a;
 }
 .fa-car {
-    color: #F4A261;
+  color: #f4a261;
 }
 .fa-hotel {
-    color: #E9795D;
+  color: #e9795d;
 }
-.fa-car, .fa-hotel, .fa-plane-departure {
-    font-size: 4em;
-    margin: 1rem;
+.fa-car,
+.fa-hotel,
+.fa-plane-departure {
+  font-size: 4em;
+  margin: 1rem;
 }
 .social a {
-    font-size: 4.5em;
-    padding: 3rem;
+  font-size: 4.5em;
+  padding: 3rem;
 }
 .fa-facebook {
-    color: #3b5998;
+  color: #3b5998;
 }
 .fa-twitter {
-    color: #00aced;
+  color: #00aced;
 }
 .fa-google-plus-g {
-    color: #dd4b39;
+  color: #dd4b39;
 }
 .fa-instagram {
-    color: #517fa4;
+  color: #517fa4;
 }
 .fa-youtube {
-    color: #b00;
+  color: #b00;
 }
 .fa-instagram:hover,
 .fa-google-plus-g:hover,
 .fa-twitter:hover,
 .fa-youtube:hover,
 .fa-facebook:hover {
-    color: #d5d5d5;
+  color: #d5d5d5;
 }
 footer {
-    background-color:#264653;
-    color:#daf2dc;
-    padding: 2rem;
+  background-color: #264653 !important;
+  color: #daf2dc !important;
+  padding: 2rem !important;
 }
 hr.light {
-    border-top: 1px solid #d5d5d5;
-    width: 75%;
-    margin-top: .8rem;
-    margin-bottom: 1rem;
+  border-top: 1px solid #d5d5d5;
+  width: 75%;
+  margin-top: 0.8rem;
+  margin-bottom: 1rem;
 }
 footer a {
-    color: #d5d5d5;
+  color: #d5d5d5 !important;
 }
 hr.light-100 {
-    border-top: 1px solid #d5d5d5;
-    width: 100%;
-    margin-top: .8rem;
-    margin-bottom: 1rem;
+  border-top: 1px solid #d5d5d5;
+  width: 100%;
+  margin-top: 0.8rem;
+  margin-bottom: 1rem;
 }
 #article {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 8px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 8px;
 }
