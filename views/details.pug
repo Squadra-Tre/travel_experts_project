@@ -1,24 +1,23 @@
 extends layout
 
 block othlink
-  link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl' crossorigin='anonymous')
-  title Travel Packages
-  link(rel='stylesheet' href='/css/packages.css')
-  script(src='/js/buttons.js')
+    link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css' integrity='sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l' crossorigin='anonymous')
+    title Travel Packages
+    link(rel='stylesheet' href='/css/packages.css')
+    script(src='/js/buttons.js')
 
 block content
-    .container-md.details
-        .row.align-items-center.py-3
-            .col
-                img.pkgimglg(src=pack.ImgLg)
-            .col-sm
-                p.fs-1.text-wrap.fw-bold.Price $#{pack.PkgBasePrice}
-                p.Price Plus applicable fees and taxes
-            .col-sm
-                a.btn.btn-primary.btn-lg(href='/users/book/' + pack.PackageId role='button') BOOK
-        .row.fs-1.py-3.fw-bold #{pack.PkgName}
-        .row.text-wrap.py-3.fs-3
-            p #{pack.PkgDesc}
-        .row.text-wrap.py-5.fs-4.fw-bold
-            p From #{pack.PkgStartDate} 
-            p To #{pack.PkgEndDate}
+  .container
+    .row.detailsbox
+      .col-lg-9.md-12.colimgdet
+          img.pkgimglg(src=pack.ImgLg)
+      .col-lg-3.md-5.info
+        .infoborder
+          p.Price $#{pack.PkgBasePrice}
+          p.Fees Plus applicable fees and taxes
+          a.badge.butsub(href='/users/book/' + pack.PackageId role='button') BOOK
+      .col.md-5.info2
+          p.Title #{pack.PkgName}
+          p.Desc #{pack.PkgDesc}
+          p.Date From: #{pack.PkgStartDate}
+          p.Date To: #{pack.PkgEndDate}
