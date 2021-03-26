@@ -15,7 +15,9 @@ block othlink
     script(src='/js/myjsscript.js')
 
 block content      
-  
+
+    h3#accntmsg.alert.alert-success= accntmsg
+
     form.back-image#regform(method='POST' action='/users/register')   
       
       h1(style='text-align:center;')
@@ -92,5 +94,10 @@ block content
             button#res.btn.btn-primary(style='margin-bottom: 20px;' type='reset' onclick='Confirm_Buttons()') Reset            
             button#sub.btn.btn-primary(style='margin-left: 4px; margin-bottom: 20px;' type='submit' onclick='Confirm_Buttons()') Submit
 
+     
     script.
+      var urlParams = new URLSearchParams(window.location.search);
+      if (urlParams.has('accntmsg'))
+      document.getElementById('accntmsg').innerText = document.getElementById('accntmsg').innerText= urlParams.get('accntmsg');
+
       LoadthePage();

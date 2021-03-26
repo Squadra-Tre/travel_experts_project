@@ -16,6 +16,7 @@ html
         block othlink
 
     body 
+        
         nav.navbar.navbar-expand-md.navbar-dark.sticky-top 
             .container-fluid 
                 a(class='navbar-brand' href='/')
@@ -35,6 +36,9 @@ html
                             a(class='nav-link' href='/users/register') Register
                         li(class='nav-item')
                             a(class='nav-link' href='/packages') Packages
+                        li(class='nav-item')
+                            a(class='nav-link' href='/sign-in') Sign in
+       
         .container-fluid 
             block content 
             br

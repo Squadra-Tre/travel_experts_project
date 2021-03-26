@@ -8,6 +8,11 @@ var mongoose = require('mongoose');
 var app = express();
 var packagesRouter = require('./routes/packages');
 var contactRouter = require('./routes/contact');
+const usersRouter = require('./routes/users');
+const aboutRouter = require('./routes/about');
+const indexRouter = require('./routes/index');
+const signinRouter = require('./routes/signin');
+const bookRouter = require('./routes/book');
 var addRouter = require('./routes/add');
 
 //Middleware
@@ -21,17 +26,18 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
-//Home Route
-const indexRouter = require('./routes/index');
-app.use('/', indexRouter);
+// For my-passport.js
+require("./my-passport").init(app);
+
 
 //Add Routes
-const usersRouter = require('./routes/users');
-const aboutRouter = require('./routes/about');
+app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/about', aboutRouter);
 app.use('/packages', packagesRouter);
 app.use('/contact', contactRouter);
+app.use('/sign-in', signinRouter);
+app.use('/book', bookRouter);
 app.use('/add', addRouter);
 
 //Start server

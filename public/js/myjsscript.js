@@ -1,5 +1,6 @@
 /* Author: Cecilia Santiago */
 
+
 function Confirm_Buttons() {
     var txtconf;
     if (confirm("Confirm to continue!")) {
