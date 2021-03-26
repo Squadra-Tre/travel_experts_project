@@ -15,22 +15,33 @@ block othlink
     script(src='/js/myjsscript.js')
 
 block content  
-    
-    form#regform(method='POST' action='/users/book')
+  
+  h3#usermsg.alert.alert-success= usermsg
 
+  if !currentUser     
+    form(style="padding: 15px;" method='POST' action='/login?redirect=/book/' + pack.PackageId)
       .form-row
         .form-group.col-md-2
-          label(for="sign") Sign in
-          input.form-control-plaintext(name="signin" type="text")
+          br
+          label(for="sign") Sign in before booking   
         .form-group.col-md-2
           label(for="username") Username
-          input#log.form-control-plaintext(name="userid" placeholder="Username" type="text")
+          input.form-control-plaintext(name="username" placeholder="Username" type="text")
         .form-group.col-md-4
           label(for="password") Password
-          input#log.form-control(name="passwd" type="password" placeholder="*******")
+          input.form-control(name="password" type="password" placeholder="******")
         .form-group.col-md-4
+          br
+          br
           button.btn.btn-primary Log In    
-
+  else  
+    h3 Hello #{currentUser.CustFirstName} 
+      br
+      p
+      a(href="/log-out" style="font-size:20px;") Log Out
+  
+      
+    form#regform(method='POST' action='/book')
       h1(style='text-align:center;')            
           strong Book a #{pack.PkgDesc}
       p Begin: #{pack.PkgStartDate}
@@ -61,9 +72,9 @@ block content
           small#msg(style='display:none;') Enter City of Arrival.
 
           input(style='display:none' name='BookingNo' value='SWSW')
-          input(style='display:none;' name='CustomerId' value="11")
+          input(style='display:none;' name='CustomerId' value=currentUser.CustomerId)
           input(style='display:none;' name='TripTypeId' value="21")
-          input(style='display:none;' name='PackageId' value="111")
+          input(style='display:none;' name='PackageId' value=pack.PackageId)
           
 
       .form-row
@@ -72,5 +83,10 @@ block content
             button#res.btn.btn-primary(style='margin-bottom: 20px;' type='reset' onclick='Confirm_Buttons()') Cancel            
             button#sub.btn.btn-primary(style='margin-left: 4px; margin-bottom: 20px;' type='submit' onclick='Confirm_Buttons()') Book            
 
+                
     script.
+      var urlParams = new URLSearchParams(window.location.search);
+      if (urlParams.has('usermsg'))
+      document.getElementById('usermsg').innerText = document.getElementById('usermsg').innerText= urlParams.get('usermsg');
+
       LoadthePage();

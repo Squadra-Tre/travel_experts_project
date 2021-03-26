@@ -1,0 +1,28 @@
+extends layout
+
+block content
+
+  h3#usermsg.alert.alert-success= usermsg
+
+  if !currentUser     
+    form(style="padding: 15px;" method='POST' action='/login?redirect=/sign-in')
+      .form-row
+        .form-group.col-md-2
+          br
+          label(for="sign") Sign in before booking                    
+        .form-group.col-md-2
+          label(for="username") Username
+          input.form-control-plaintext(name="username" placeholder="Username" type="text")
+        .form-group.col-md-4
+          label(for="password") Password
+          input.form-control(name="password" type="password" placeholder="******")
+        .form-group.col-md-4
+          br
+          br
+          button.btn.btn-primary Log In    
+  else  
+    h3 Hello #{currentUser.CustFirstName} 
+      br
+      p
+      a(href="/log-out" style="font-size:20px;") Log Out
+    
