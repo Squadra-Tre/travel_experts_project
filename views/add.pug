@@ -1,0 +1,44 @@
+head
+  link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm' crossorigin='anonymous')
+  script(src='https://code.jquery.com/jquery-3.2.1.slim.min.js' integrity='sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN' crossorigin='anonymous')
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js' integrity='sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q' crossorigin='anonymous')
+  script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js' integrity='sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl' crossorigin='anonymous')
+  link(rel='stylesheet' href='css/form.css')
+
+
+body
+    .container-md
+        .formDesign
+            p.formtitle Vacation Package Registration Form
+                form.form.group(action='/add' method="POST")
+                    .row.rowmarg
+                        .col
+                        label.formlabel(for='PkgName') Package Name:
+                        input#PkgName.form-control(type='text' name="PkgName" placeholder='Package Name' autocomplete='off' required='')
+                        .col
+                        label.formlabel(for='PkgBasePrice') Package Price:
+                        input#PkgBasePrice.form-control(type='num' name="PkgBasePrice" placeholder='Package Price' autocomplete='off' required='')
+                    .row.rowmarg
+                        .col
+                        label.formlabel(for='PkgStartDate') Package Start Date:
+                        input#PkgStartDate.form-control(type='date' name="PkgStartDate" placeholder='Package Start Date' autocomplete='off' min='datetime-local' required='')
+                        .col
+                        label.formlabel(for='PkgEndDate') Package End Date:
+                        input#PkgEndDate.form-control(type='date' name="PkgEndDate" placeholder='Package End Date'  autocomplete='off' min='datetime-local' required='')
+                    .row.rowmarg
+                        .col
+                        label.formlabel(for='Img') Image Link (Small Image):
+                        input#Img.form-control(type='text' name="Img" placeholder='/images/pkgs/filename.png'  autocomplete='off' value='/images/pkgs/')
+                        .col
+                        label.formlabel(for='ImgLg') Image Link (Large Image)
+                        input#ImgLg.form-control(type='text' name="ImgLg" placeholder='/images/pkgs/filename.png'  autocomplete='off' value='/images/pkgs/')
+                    .row.rowmarg
+                        .col
+                        label.formlabel(for='PkgDesc') Package Summary:
+                        textarea#PkgDesc.form-control(type='text' name="PkgDesc" placeholder='Package Description'  autocomplete='off' required='')
+                        .col
+                        label.formlabel(for='DetPkgDesc') Package Description
+                        textarea#DetPkgDesc.form-control(type='text' name="DetPkgDesc" placeholder='Detailed Package Description'  autocomplete='off' required='')
+                    .row.rowmarg
+                        button.formbuttons(type='reset' value='Reset') Reset
+                        button.formbuttons(type='submit' value='Submit') Submit

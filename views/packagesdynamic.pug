@@ -1,18 +1,19 @@
 extends layout
 
 block othlink
-  link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css' integrity='sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l' crossorigin='anonymous')
-  title Travel Packages
-  link(rel='stylesheet' href='../css/packages.css')
-  script(src='../js/buttons.js')
-
+  link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm' crossorigin='anonymous')
+  script(src='https://code.jquery.com/jquery-3.2.1.slim.min.js' integrity='sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN' crossorigin='anonymous')
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js' integrity='sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q' crossorigin='anonymous')
+  script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js' integrity='sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl' crossorigin='anonymous')
+  link(rel='stylesheet' href='../css/modal.css')
+  link(rel='stylesheet' href='/css/packages.css')
+  
 
 block content
   .container
     p.titlefont Select From One of Our Exciting Travel Packages!
     each package in packages
-      button.row.button.position-relative(type='submit')
-        a(class="stretched-link" href='/packages/details/' + package.PackageId)
+      button.row.button.position-relative(type='button' data-toggle='modal' data-target="#detailsmodal" + package.PackageId)
         .col.colimg
           img.pkgimg(src=package.Img)
         .col.coldesc
@@ -22,5 +23,27 @@ block content
             p.desc #{package.PkgDesc}
           .desc
             p.badge.price $#{package.PkgBasePrice}
-        
-                
+
+      .modal.fade(id="detailsmodal" + package.PackageId tabindex='-1' role='dialog' aria-labelledby='details' aria-hidden='true')
+            .modal-dialog.modalSize.modal-dialog-centered(role='document')
+              .modal-content.outerModal
+                .modal-body.pack
+                  .container
+                    button.close.modalclose(type='button' data-dismiss='modal' aria-label='Close')
+                      span(aria-hidden='true') &times;
+                    .row.boxmodal
+                      .col-lg-9.md-12.colimgdet
+                        img.imgmodal(src=package.ImgLg)
+                      .col-lg-3.md-5.modalInfo
+                        .modalinfoborder
+                          p.modalPrice $#{package.PkgBasePrice}
+                          p.modalFees Plus applicable fees and taxes
+                      .col.md-5.modalInfo2
+                        p.modalTitle #{package.PkgName}
+                        p.modalDesc #{package.DetPkgDesc}
+                        p.modalDate From #{package.PkgStartDate}
+                        p.modalDate To #{package.PkgEndDate}
+                    .row.modalbuttons
+                      button.btn.modalclose(type='button' data-dismiss='modal')
+                        | Close
+                      a.btn.modalbook(href='/users/book/' + package.PackageId role='button') BOOK

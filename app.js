@@ -8,6 +8,7 @@ var mongoose = require('mongoose');
 var app = express();
 var packagesRouter = require('./routes/packages');
 var contactRouter = require('./routes/contact');
+var addRouter = require('./routes/add');
 
 //Middleware
 app.use(logger('dev'));
@@ -31,6 +32,7 @@ app.use('/users', usersRouter);
 app.use('/about', aboutRouter);
 app.use('/packages', packagesRouter);
 app.use('/contact', contactRouter);
+app.use('/add', addRouter);
 
 //Start server
 const port = process.env.PORT || 3000;

@@ -6,7 +6,7 @@ const mongoose = require("mongoose");
 
 const dbURI = "mongodb+srv://travel-expert:travel1234@cluster0.orc02.mongodb.net/travelexperts_mongodb_json_collections?authSource=admin&replicaSet=atlas-71fnej-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true";
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then((result) => console.log('Connected to db.'))
+  .then((result) => console.log('CONTACTS connected to db.'))
   .catch((err) => console.log(err));
 const db = mongoose.connection;
 

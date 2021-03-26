@@ -1,5 +1,7 @@
 const mongoose = require('mongoose');
+const AutoIncrement= require('mongoose-sequence')(mongoose);
 const Schema = mongoose.Schema;
+
 
 const packSchema = new mongoose.Schema({
     PackageId: {
@@ -7,29 +9,51 @@ const packSchema = new mongoose.Schema({
     },
     PkgName: {
         type: String,
+        required: true,
+        trim: true,
     },
     PkgStartDate: {
         type: Date,
+        required: true,
+        trim: true,
     },
     PkgEndDate: {
         type: Date,
+        required: true,
+        trim: true,
     },
     PkgDesc: {
         type: String,
+        required: true,
+        trim: true,
     },
     PkgBasePrice: {
         type: Number,
-    },
-    PkgAgencyCommission: {
-        type: Number,
-    },
+        required: true,
+        trim: true,
+    },    
     Img: {
         type: String,
+        required: true,
+        trim: true,
     },
     ImgLg: {
         type: String,
+        required: true,
+        trim: true,
     },
-
+    _id: {
+        type: Number,
+    },
+    DetPkgDesc: {
+        type: String,
+        required: true,
+        trim: true,
+    }
 });
+
+packSchema.plugin(AutoIncrement, {inc_field: '_id'});
+packSchema.plugin(AutoIncrement, {inc_field: 'PackageId'});
+
 
 module.exports = mongoose.model('package', packSchema)
