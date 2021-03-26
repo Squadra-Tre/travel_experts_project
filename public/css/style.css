@@ -4,22 +4,22 @@ html,
 body {
   height: 100%;
   width: 100%;
-  font-family: "Poppins", sans-serif !important;
+  font-family: "Poppins", sans-serif;
   color: #222;
 }
 nav {
-  background-color: #264653 !important;
-  color: #daf2dc !important;
-  font-size: 17px !important;
+  background-color: #264653;
+  color: #daf2dc;
+  font-size: 17px;
 }
 .navbar {
-  padding: 0.8rem !important;
+  padding: 0.8rem;
 }
 .navbar-nav li {
-  padding-right: 20px !important;
+  padding-right: 20px;
 }
 .nav-link {
-  font-size: 1.1em !important;
+  font-size: 1.1em;
 }
 .carousel-caption {
   position: absolute;
@@ -110,9 +110,9 @@ nav {
   color: #d5d5d5;
 }
 footer {
-  background-color: #264653 !important;
-  color: #daf2dc !important;
-  padding: 2rem !important;
+  background-color: #264653;
+  color: #daf2dc;
+  padding: 2rem;
 }
 hr.light {
   border-top: 1px solid #d5d5d5;
@@ -121,7 +121,7 @@ hr.light {
   margin-bottom: 1rem;
 }
 footer a {
-  color: #d5d5d5 !important;
+  color: #d5d5d5;
 }
 hr.light-100 {
   border-top: 1px solid #d5d5d5;

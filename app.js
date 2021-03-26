@@ -13,6 +13,7 @@ const aboutRouter = require('./routes/about');
 const indexRouter = require('./routes/index');
 const signinRouter = require('./routes/signin');
 const bookRouter = require('./routes/book');
+var addRouter = require('./routes/add');
 
 //Middleware
 app.use(logger('dev'));
@@ -37,6 +38,7 @@ app.use('/packages', packagesRouter);
 app.use('/contact', contactRouter);
 app.use('/sign-in', signinRouter);
 app.use('/book', bookRouter);
+app.use('/add', addRouter);
 
 //Start server
 const port = process.env.PORT || 3000;

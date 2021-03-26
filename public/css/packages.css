@@ -8,98 +8,255 @@ body {
   background-size: cover;
   font-weight: 200;
 }
-.pkgimg {
-  width: 100%;
-  margin-top: 3px;
-  margin-left: 3px;
-  margin-bottom: 3px;
-  margin-right: 10px;
-  box-shadow: 2px 2px 3px #000000bd;
-}
-.button {
-  background-color: rgb(38, 70, 83);
-  margin: 15px;
-  border: 2px solid rgb(38, 70, 83);
-  font-weight: 300;
-  color: white;
-}
-.button:hover {
-  -webkit-box-shadow: 5px 5px 3px 3px rgba(0, 0, 0, 0.3);
-  box-shadow: 3px 3px 5px #000000bd;
-}
-.price {
-  background-color: rgb(42, 157, 143);
-  color: white;
-  border-radius: 10px;
-  text-align: center;
-  font-size: 25px;
-  width: 8rem;
-  height: 3.7rem;
-  padding-top: 10px;
-  padding-bottom: 5px;
-  margin-left: 70px;
-  margin-bottom: 20px;
-  margin-top: 15px;
-  font-weight: 500;
-}
-
-.title {
-  text-align: left;
-  padding: 20px;
-  font-size: 40px;
-  margin-top: 20px;
-  color: white;
-  font-weight: 500;
-}
-
-.desc {
-  text-align: left;
-  padding-top: 25px;
-  font-size: 25px;
-  color: white;
-  font-weight: 300;
-}
-
-.coldesc {
-  text-align: center;
-}
-
-.pkgfont {
+.titlefont {
   text-align: center;
   font-size: 40px;
   font-weight: bold;
   padding: 30px;
   font-weight: 500;
 }
-
-/*Package Description Page*/
-
-.Price {
+.button {
+  background-color: rgba(51, 92, 109, 0.877);
+  margin: 15px;
+  border: 2px solid rgb(51, 93, 109);
+  font-weight: 300;
+  color: white;
+  width: 1200px;
+  max-width: 100%;
+}
+.button:hover {
+  -webkit-box-shadow: 5px 5px 3px 3px rgba(0, 0, 0, 0.3);
+  box-shadow: 3px 3px 5px #000000bd;
+  background-color: rgba(51, 92, 109);
+}
+.colimg {
+  padding: 10px;
+}
+.colimgdet {
+  align-content: center;
+}
+.coldesc {
+  padding: 30px;
+  display: grid;
+  grid-template-rows: repeat(auto-fill);
+}
+.pkgimg {
+  box-shadow: 2px 2px 3px #000000bd;
+  min-width: 300px;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.title {
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 40px;
+}
+.desc {
+  font-size: 25px;
+  text-align: center;
+}
+.price {
+  background-color: rgb(42, 157, 143);
+  font-size: 35px;
+  padding: 15px;
   text-align: center;
 }
 
-.details {
-  background-color: white;
-  padding: 40px;
-  margin-top: 50px;
+/*Package Description Page*/
+
+.detailsbox {
+  background-color: rgba(51, 92, 109);
   box-shadow: 3px 3px 8px #000000bd;
+  color: white;
+  padding: 30px;
+  margin-top: 70px;
+  font-weight: 300;
+  color: white;
+  width: 1200px;
+  max-width: 100%;
 }
 .pkgimglg {
-  max-height: 100%;
-  box-shadow: 3px 3px 12px #00000069;
+  max-width: 800px;
+  min-width: 300px;
+  width: 100%;
+  box-shadow: 2px 2px 7px #00000069;
+}
+.info {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+.infoborder {
+  background-color: rgb(14, 59, 77);
+  padding: 25px;
+}
+.info2 {
+  display: grid;
+  justify-content: left;
+  align-content: left;
+}
+.Price {
+  text-align: center;
+  font-size: 45px;
+  font-weight: bold;
+}
+.Fees {
+  font-size: 12px;
+  text-align: center;
+}
+.Title {
+  font-size: 40px;
+  font-weight: bold;
+  margin-left: 50px;
+  margin-top: 15px;
+}
+.Desc {
+  font-size: 25px;
+  text-align: left;
+  margin-left: 65px;
+}
+.Date {
+  font-size: 17px;
+  text-align: left;
+  margin-left: 65px;
+}
+.butsub {
+  margin: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 35px;
+  font-weight: bold;
+  color: white;
+  background-color: rgb(42, 157, 143);
+}
+
+@media only screen and (max-width: 1200px) {
+  .title {
+    font-size: 30px;
+  }
+  .desc {
+    font-size: 20px;
+  }
+  .price {
+    font-size: 25px;
+  }
 }
 
 @media only screen and (max-width: 1000px) {
   .title {
-    font-size: 22px;
-    padding-left: 50px;
+    font-size: 27px;
+    padding: 0px;
+    margin: 0px;
   }
   .desc {
     font-size: 15px;
-    padding-top: 0px;
-    padding-left: 50px;
+    padding: 0px;
+    margin: 0px;
+    padding: 5px;
   }
   .price {
+    font-size: 25px;
+    margin-top: 10px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+  }
+}
+@media only screen and (max-width: 990px) {
+  .pkgimglg {
+    max-width: 600px;
+    min-width: 300px;
+    width: 100%;
+    box-shadow: 2px 2px 7px #00000069;
+  }
+  .Title {
+    font-size: 35px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 15px;
+  }
+  .Desc {
+    font-size: 25px;
+    text-align: center;
+    margin-left: 0px;
+  }
+  .Date {
+    font-size: 15px;
+    text-align: center;
+    margin-left: 0px;
+  }
+  .Price {
+    text-align: center;
+    font-size: 45px;
+    font-weight: bold;
+  }
+  .Fees {
+    font-size: 12px;
+    text-align: center;
+  }
+  .infoborder {
+    background-color: rgb(14, 59, 77);
+  }
+  .butsub {
+    margin: 0px;
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(42, 157, 143);
+  }
+  .info {
+    display: grid;
+    text-align: center;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    padding-left: 20px;
+    padding-left: 20px;
+    margin-top: 10px;
+  }
+  .info2 {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .Title {
+    font-size: 23px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 15px;
+  }
+  .Desc {
+    font-size: 15px;
+    margin-left: 0px;
+  }
+  .Date {
+    font-size: 8px;
+    margin-left: 0px;
+  }
+  .Price {
+    text-align: center;
+    font-size: 35px;
+    font-weight: bold;
+  }
+  .Fees {
+    font-size: 12px;
+    text-align: center;
+  }
+  .infoborder {
+    background-color: rgb(14, 59, 77);
+  }
+  .butsub {
+    margin: 0px;
     font-size: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(42, 157, 143);
   }
 }

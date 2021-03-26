@@ -1,0 +1,223 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;500&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-image: url(../images/plane.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  font-weight: 200;
+}
+
+.modalSize {
+  max-width: 1200px;
+}
+.outerModal {
+  background-color: rgba(51, 92, 109);
+  box-shadow: 2px 2px 7px #00000069;
+}
+.boxmodal {
+  color: white;
+  padding: 30px;
+  margin-top: 70px;
+  font-weight: 300;
+  color: white;
+  width: 1200px;
+  max-width: 100%;
+}
+.imgmodal {
+  max-width: 800px;
+  min-width: 325px;
+  width: 100%;
+  box-shadow: 2px 2px 4px #00000069;
+  align-content: center;
+}
+.modalinfoborder {
+  background-color: rgb(14, 59, 77);
+  padding: 45px;
+  margin-left: 55px;
+}
+.modalInfo {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+.modalInfo2 {
+  display: grid;
+  justify-content: left;
+  align-content: left;
+}
+.modalclose {
+  color: rgb(112, 207, 196);
+  text-shadow: 1px 1px 0px #000;
+  opacity: 1;
+}
+.modalbook {
+  background-color: rgb(112, 207, 196);
+  color: white;
+  font-size: 30px;
+  margin: 5px;
+}
+.modalclose {
+  font-size: 30px;
+  background-color: rgb(43, 49, 51);
+  color: white;
+  margin: 5px;
+}
+.modalbuttons {
+  float: right;
+  margin-bottom: 40px;
+  margin-right: 20px;
+}
+.modalTitle {
+  font-size: 40px;
+  font-weight: bold;
+  margin-left: 50px;
+  margin-top: 15px;
+}
+.modalDesc {
+  font-size: 25px;
+  text-align: left;
+  margin-left: 65px;
+}
+.modalDate {
+  font-size: 17px;
+  text-align: left;
+  margin-left: 65px;
+}
+.modalPrice {
+  text-align: center;
+  font-size: 45px;
+  font-weight: bold;
+}
+.modalFees {
+  font-size: 12px;
+  text-align: center;
+}
+
+@media only screen and (max-width: 992px) {
+  .modalTitle {
+    font-size: 40px;
+    font-weight: bold;
+    margin-left: 50px;
+    margin-top: 15px;
+    text-align: center;
+  }
+  .modalDesc {
+    font-size: 25px;
+    text-align: center;
+    margin-left: 65px;
+  }
+  .modalDate {
+    font-size: 17px;
+    text-align: center;
+    margin-left: 65px;
+  }
+  .modalPrice {
+    text-align: center;
+    font-size: 45px;
+    font-weight: bold;
+  }
+  .modalFees {
+    font-size: 12px;
+    text-align: center;
+  }
+  .modalinfoborder {
+    background-color: rgb(14, 59, 77);
+    padding: 45px;
+    margin-top: 10px;
+    align-content: center;
+  }
+  .imgmodal {
+    max-width: 800px;
+    min-width: 325px;
+    width: 100%;
+    box-shadow: 2px 2px 4px #00000069;
+    align-content: center;
+    margin-left: 20px;
+  }
+  .modalbuttons {
+    margin-bottom: 40px;
+    text-align: center;
+    padding-right: 180px;
+  }
+  .modalbook {
+    margin-left: 20px;
+  }
+  .modalclose {
+    margin-right: 20px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .modalTitle {
+    font-size: 32px;
+    font-weight: bold;
+    margin-top: 15px;
+    text-align: center;
+  }
+  .imgmodal {
+    min-width: 450px;
+    margin-left: 0px;
+    margin-right: 25px;
+  }
+  .modalbuttons {
+    margin-bottom: 40px;
+    text-align: center;
+    padding-right: 95px;
+  }
+}
+@media only screen and (max-width: 620px) {
+  .boxmodal {
+    color: white;
+    padding: 0px;
+    margin-top: 70px;
+    font-weight: 300;
+    color: white;
+    max-width: 100%;
+  }
+  .imgmodal {
+    margin-left: 15px;
+    min-width: 325px;
+    margin-right: 10px;
+  }
+  .modalTitle {
+    font-size: 25px;
+    margin-right: 24px;
+  }
+  .modalPrice {
+    font-size: 33px;
+  }
+  .modalDesc {
+    font-size: 15px;
+    text-align: center;
+    margin-right: 35px;
+  }
+  .modalDate {
+    font-size: 10px;
+    text-align: center;
+    margin-left: 22px;
+  }
+  .modalinfoborder {
+    background-color: rgb(14, 59, 77);
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-top: 10px;
+  }
+  .modalInfo {
+    padding-right: 44px;
+    padding-left: 20px;
+  }
+  .modalbuttons {
+    margin-bottom: 40px;
+    text-align: center;
+    padding-right: 34px;
+    margin-top: 10px;
+  }
+  .modalbook {
+    margin-left: 10px;
+  }
+  .modalclose {
+    margin-right: 10px;
+  }
+}
