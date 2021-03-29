@@ -1,3 +1,5 @@
+/*Matt Biesbroek - Team 3*/
+
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;500&display=swap");
 
 body {
@@ -64,6 +66,17 @@ body {
   color: white;
   margin: 5px;
 }
+
+.modalclose:hover {
+  background-color: rgb(20, 23, 24);
+  color: rgb(110, 110, 110);
+}
+.modalbook:hover {
+  color: rgb(161, 161, 161);
+  text-decoration: none;
+  background-color: rgb(42, 109, 101);
+}
+
 .modalbuttons {
   float: right;
   margin-bottom: 40px;

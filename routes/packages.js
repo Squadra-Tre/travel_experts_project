@@ -1,3 +1,5 @@
+/*Matt Biesbroek - Team 3*/
+
 var express = require('express');
 var router = express.Router();
 const pack = require('../models/packages');
@@ -11,7 +13,7 @@ const db = mongoose.connection;
 
 /* Render Dynamic Package Page */
 router.get('/', function (req, res, next) {
-  pack.find(function (err, packages) {
+  packs.find(function (err, packages) {
     console.log(packages);
     res.render('packagesdynamic', { packages });
   });
