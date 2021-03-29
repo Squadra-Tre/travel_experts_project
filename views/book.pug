@@ -16,7 +16,7 @@ block othlink
 
 block content  
   
-  h3#usermsg.alert.alert-success= usermsg
+  //h3#usermsg.alert.alert-success= usermsg
 
   if !currentUser     
     form(style="padding: 15px;" method='POST' action='/login?redirect=/book/' + pack.PackageId)
@@ -31,7 +31,6 @@ block content
           label(for="password") Password
           input.form-control(name="password" type="password" placeholder="******")
         .form-group.col-md-4
-          br
           br
           button.btn.btn-primary Log In    
   else  

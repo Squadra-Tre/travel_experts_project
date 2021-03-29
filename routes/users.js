@@ -15,7 +15,11 @@ router.get('/', function (req, res, next) {
 // Author: Cecilia Santiago
 /* GET register page. */
 router.get("/register", function (req, res, next) {
-  res.render("customer");
+  res.render("customer", {
+    errors: {},
+    data: {},
+    invbox: "border border-info",
+  });
 });
 
 
@@ -28,10 +32,20 @@ router.post("/register", function (req, res, next) {
     req.body.passwd = hashedPassword;
 
     const myregist = new Customer(req.body);
+    console.log(req.body);
     myregist.save((err, result) => {
       console.log('The data is saved in', result);
-      if (err) { //res.send(err);
-        console.log(err);
+      if (err) {
+        const errorObj = {};
+        const errorKeys = Object.keys(err.errors);
+        errorKeys.forEach(key => errorObj[key] = err.errors[key].message);
+        //console.log(errorObj);
+        return res.render("customer",
+          {
+            errors: errorObj,
+            data: req.body,
+            invbox: "border border-danger",
+          });
       }
       const accntmsg = `Your account has been created ${result.CustFirstName} ${result.CustLastName}`;
       res.redirect('/users/register/?accntmsg=' + accntmsg);

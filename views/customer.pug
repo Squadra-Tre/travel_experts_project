@@ -26,73 +26,85 @@ block content
       .form-row      
         .form-group.col-md-6
           label(for='fname') First Name
-          input#fname.form-control(type='text' name='CustFirstName' placeholder='First Name' required='')
+          input#fname.form-control(class=invbox type='text' name='CustFirstName' value=data.CustFirstName placeholder='First Name')
           small#msg(style='display:none;') Enter First Name here.
+          p.text-danger= errors.CustFirstName
 
         .form-group.col-md-6
           label(for='lname') Last Name
-          input#lname.form-control(type='text' name='CustLastName' placeholder='Last Name' required='')
+          input#lname.form-control(class=invbox type='text' name='CustLastName' value=data.CustLastName placeholder='Last Name')
           small#msg(style='display:none;') Enter Last Name here.
+          p.text-danger= errors.CustLastName
 
       .form-group
         label(for='addr1') Address
-        input#addr1.form-control(type='text' name='CustAddress' placeholder='1234 Main St' required='')
+        input#addr1.form-control(class=invbox type='text' name='CustAddress' value=data.CustAddress placeholder='1234 Main St')
         small#msg(style='display:none;') Enter Main address here.
+        p.text-danger= errors.CustAddress
 
       .form-row
         .form-group.col-md-4
           label(for='city') City
-          input#city.form-control(type='text' name='CustCity' placeholder='City' required='')
+          input#city.form-control(class=invbox type='text' name='CustCity' value=data.CustCity placeholder='City')
           small#msg(style='display:none;') Enter City here.
+          p.text-danger= errors.CustCity
 
         .form-group.col-md-2
           label(for='prov') Prov/State
-          input#prov.form-control(list='options' name='CustProv' placeholder='' required='')
+          input#prov.form-control(class=invbox list='options' name='CustProv' value=data.CustProv placeholder='')
           small#msg(style='display:none;') Enter Province here.
+          p.text-danger= errors.CustProv
          
         .form-group.col-md-2
           label(for='post') Postal
-          input#post.form-control(type='text' name='CustPostal' placeholder='H1H 0H0' pattern='^[A-Z]\\d[A-Z] ?\\d[A-Z]\\d$' required='')
+          input#post.form-control(class=invbox type='text' name='CustPostal' value=data.CustPostal placeholder='H1H 0H0' pattern='^[A-Z]\\d[A-Z] ?\\d[A-Z]\\d$')
           small#msg(style='display:none;') Enter Postal here.
+          p.text-danger= errors.CustPostal
 
       
         .form-group.col-md-4
           label(for='cntry') Country
-          input#cntry.form-control(type='text' name='CustCountry' placeholder='Country' required='')
+          input#cntry.form-control(class=invbox type='text' name='CustCountry' value=data.CustCountry placeholder='Country')
           small#msg(style='display:none;') Enter Country here.
+          p.text-danger= errors.CustCountry
 
       .form-row
         .form-group.col-md-3
           label(for='hphone') Home/Cell Phone:
-          input#hphone.form-control(type='tel' name='CustHomePhone' placeholder='123-456-7890' pattern='[0-9]{3}-[0-9]{3}-[0-9]{4}' required='')
+          input#hphone.form-control(class=invbox type='tel' name='CustHomePhone' value=data.CustHomePhone placeholder='123-456-7890' pattern='[0-9]{3}-[0-9]{3}-[0-9]{4}')
           small#msg(style='display:none;') Enter Home/Cell Phone here.
+          p.text-danger= errors.CustHomePhone
 
         .form-group.col-md-3
           label(for='bphone') Bus/Cell Phone:
-          input#bphone.form-control(type='tel' name='CustBusPhone' placeholder='123-456-7890' pattern='[0-9]{3}-[0-9]{3}-[0-9]{4}')
+          input#bphone.form-control(class=invbox type='tel' name='CustBusPhone' value=data.CustBusPhone placeholder='123-456-7890' pattern='[0-9]{3}-[0-9]{3}-[0-9]{4}')
           small#msg(style='display:none;') Enter Business/Cell Phone here.
+          p.text-danger= errors.CustBusPhone
 
         .form-group.col-md-6
           label(for='email') Email
-          input#email.form-control(type='email' name='CustEmail' placeholder='Email' required='')
+          input#email.form-control(class=invbox type='email' name='CustEmail' value=data.CustEmail placeholder='Email')
           small#msg(style='display:none;') Enter Email here.
+          p.text-danger= errors.CustEmail
 
       .form-row
         .form-group.col-md-4
           label(for='usrname') UserName
-          input#usrname.form-control(type='text' name='userid' placeholder='UserName' required='')
+          input#usrname.form-control(class=invbox type='text' name='userid' value=data.userid placeholder='UserName')
           small#msg(style='display:none;') Enter UserName here.
+          p.text-danger= errors.userid
 
         .form-group.col-md-4
           label(for='passwd') Password
-          input#passwd.form-control(type='password' name='passwd' placeholder='Password' required='')
+          input#passwd.form-control(class=invbox type='password' name='passwd' placeholder='Password')
           small#msg(style='display:none;') Enter Password here
+          
 
       .form-row
         .form-group.col-md-4
         .form-group.col-md-4
-            button#res.btn.btn-primary(style='margin-bottom: 20px;' type='reset' onclick='Confirm_Buttons()') Reset            
-            button#sub.btn.btn-primary(style='margin-left: 4px; margin-bottom: 20px;' type='submit' onclick='Confirm_Buttons()') Submit
+            button#res.btn.btn-primary(style='margin-bottom: 20px;' type='reset') Reset            
+            button#sub.btn.btn-primary(style='margin-left: 4px; margin-bottom: 20px;' type='submit') Submit
 
      
     script.

@@ -3,20 +3,20 @@ var router = express.Router();
 const pack = require('../models/packages');
 
 const mongoose = require('mongoose')
-const dbURI = "mongodb+srv://travel-expert:travel1234@cluster0.orc02.mongodb.net/travelexperts_mongodb_json_collections?authSource=admin&replicaSet=atlas-71fnej-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true";
+const dbURI = process.env.MONGO_URL;
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
-.then((result) => console.log('ADD connected to db.'))
-.catch((err) => console.log(err));
+  .then((result) => console.log('ADD connected to db.'))
+  .catch((err) => console.log(err));
 const db = mongoose.connection;
 
-router.get('/', function (req, res, next){
-    res.render('add');
-  });
+router.get('/', function (req, res, next) {
+  res.render('add');
+});
 
 router.post('/', function (req, res, next) {
   const travpack = new pack(req.body);
 
-  travpack.save((err, result)=> {
+  travpack.save((err, result) => {
     if (err) return console.log(err);
 
     res.redirect('/add');

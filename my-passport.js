@@ -2,10 +2,11 @@ const passport = require("passport");
 const bcrypt = require("bcryptjs");
 const LocalStrategy = require("passport-local").Strategy;
 
+
 module.exports.init = function (app) {
   app.use(
     require("express-session")({
-      secret: "tihhitithhtithiiht",
+      secret: process.env.PASSPORT_SECRET,
       resave: true,
       saveUninitialized: true,
     })

@@ -5,8 +5,8 @@
 const mongoose = require('mongoose'), autoIncrement = require('mongoose-auto-increment');
 const uniqueValidator = require("mongoose-unique-validator");
 
-//mongoose.connect('mongodb://localhost:27017/newdb',
-mongoose.connect('mongodb+srv://travel-expert:travel1234@cluster0.orc02.mongodb.net/travelexperts_mongodb_json_collections?authSource=admin&replicaSet=atlas-71fnej-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true',
+
+mongoose.connect(process.env.MONGO_URL,
     { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false, useCreateIndex: true });
 
 autoIncrement.initialize(mongoose);
@@ -69,7 +69,8 @@ const regSchema = new mongoose.Schema({
 
     CustHomePhone: {
         type: String,
-        trim: true
+        trim: true,
+        required: [true, 'Home phone cannot be empty']
     },
 
     CustBusPhone: {
