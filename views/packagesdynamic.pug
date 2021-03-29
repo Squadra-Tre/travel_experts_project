@@ -1,6 +1,11 @@
 extends layout
+  
 
 block othlink
+
+  //Matt Biesbroek - Team 3
+
+  title Travel Packages
   link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm' crossorigin='anonymous')
   script(src='https://code.jquery.com/jquery-3.2.1.slim.min.js' integrity='sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN' crossorigin='anonymous')
   script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js' integrity='sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q' crossorigin='anonymous')
@@ -13,6 +18,9 @@ block content
   .container
     p.titlefont Select From One of Our Exciting Travel Packages!
     each package in packages
+
+      //Code for Package Table
+
       button.row.button.position-relative(type='button' data-toggle='modal' data-target="#detailsmodal" + package.PackageId)
         .col.colimg
           img.pkgimg(src=package.Img)
@@ -24,6 +32,8 @@ block content
           .desc
             p.badge.price $#{package.PkgBasePrice}
 
+      //Code for Package Modal 
+      
       .modal.fade(id="detailsmodal" + package.PackageId tabindex='-1' role='dialog' aria-labelledby='details' aria-hidden='true')
             .modal-dialog.modalSize.modal-dialog-centered(role='document')
               .modal-content.outerModal

@@ -1,3 +1,5 @@
+/*Matt Biesbroek - Team 3*/
+
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;500&display=swap");
 
 body {
@@ -111,8 +113,8 @@ th {
   margin-right: auto;
 }
 .deleteButton {
-  background-color: rgb(112, 207, 196);
-  border: rgb(112, 207, 196);
+  background-color: rgb(255, 0, 0);
+  border: rgb(255, 0, 0);
   color: white;
   padding: 5px;
   font-size: 20px;
@@ -123,7 +125,7 @@ th {
 }
 
 .deleteButton:hover {
-  color: rgb(161, 161, 161);
+  color: rgb(139, 139, 139);
   text-decoration: none;
-  background-color: rgb(42, 109, 101);
+  background-color: rgb(100, 18, 18);
 }
