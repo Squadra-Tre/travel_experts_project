@@ -5,22 +5,26 @@ body {
   font-weight: 200;
 }
 .formDesign {
-  background-color: rgb(106, 198, 252);
-  margin: 30px;
-  padding: 50px;
-  display: grid;
+  background-color: rgba(51, 92, 109, 0.877);
+  color: white;
+  padding: 30px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
 .formtitle {
   text-align: center;
   font-weight: bold;
   font-size: 25px;
 }
-.test {
-  background-color: greenyellow;
-}
 .rowmarg {
   margin: 10px;
   padding: 10px;
+}
+.colDesign {
+  margin-top: 10px;
 }
 
 .formlabel {
@@ -36,4 +40,74 @@ body {
   padding-right: 10px;
   font-size: 25px;
   margin: 5px;
+}
+.rowDesign {
+  padding: 15px;
+}
+.txtBox {
+  resize: none;
+  padding-bottom: 50px;
+  width: 100%;
+  min-width: 295px;
+}
+.linkBox {
+  width: 100%;
+  min-width: 292.667px;
+}
+/*Table Design*/
+
+.listtable {
+  margin: 20px;
+  padding: 20px;
+}
+.resetbutton {
+  font-size: 30px;
+  background-color: rgb(43, 49, 51);
+  border: rgb(43, 49, 51);
+  color: white;
+  margin: 5px;
+}
+.submitbutton {
+  background-color: rgb(112, 207, 196);
+  border: rgb(112, 207, 196);
+  color: white;
+  font-size: 30px;
+  margin: 5px;
+}
+
+table,
+th,
+td {
+  border: 1px solid rgba(51, 92, 109);
+  background-color: rgba(51, 92, 109);
+}
+table {
+  border-collapse: collapse;
+  width: 20%;
+  font-size: 20px;
+}
+td {
+  height: 40px;
+  padding-top: 10px;
+}
+tr {
+  color: white;
+}
+th {
+  color: white;
+}
+.container-md {
+  max-width: 1500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.deleteButton {
+  background-color: rgb(112, 207, 196);
+  border: rgb(112, 207, 196);
+  color: white;
+  padding: 5px;
+  font-size: 20px;
+  border-radius: 5px;
+  margin: 5px;
+  margin-left: 10px;
 }

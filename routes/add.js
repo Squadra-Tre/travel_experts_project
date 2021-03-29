@@ -10,7 +10,9 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
 const db = mongoose.connection;
 
 router.get('/', function (req, res, next){
-    res.render('add');
+  pack.find(function(err,packages) {
+    res.render('add', {packages});
+});
   });
 
 router.post('/', function (req, res, next) {
