@@ -1,12 +1,15 @@
-head
+extends layout 
+
+block othlink
   link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm' crossorigin='anonymous')
   script(src='https://code.jquery.com/jquery-3.2.1.slim.min.js' integrity='sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN' crossorigin='anonymous')
   script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js' integrity='sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q' crossorigin='anonymous')
   script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js' integrity='sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl' crossorigin='anonymous')
   link(rel='stylesheet' href='css/form.css')
+  script(src='/js/form.js')
 
 
-body
+block content
 
     .wrapper.flex-grow-1
         .container-md
@@ -23,10 +26,10 @@ body
                     .row.rowDesign
                         .col-md.colDesign
                             label.formlabel(for='PkgStartDate') Package Start Date:
-                            input#PkgStartDate.form-control(type='date' name="PkgStartDate" placeholder='Package Start Date' autocomplete='off' min='datetime-local' required='')
+                            input#PkgStartDate.form-control(type='date' name="PkgStartDate" placeholder='Package Start Date' autocomplete='off' min='2021-04-01' required='')
                         .col-md.colDesign
                             label.formlabel(for='PkgEndDate') Package End Date:
-                            input#PkgEndDate.form-control(type='date' name="PkgEndDate" placeholder='Package End Date'  autocomplete='off' min='datetime-local' required='')
+                            input#PkgEndDate.form-control(type='date' name="PkgEndDate" placeholder='Package End Date' autocomplete='off' min='2021-04-01' required='')
                     .row.rowDesign
                         .col.colDesign
                             label.formlabel(for='Img') Image Link (Small Image):
@@ -45,4 +48,21 @@ body
                         .row.rowmarg
                         button.formbuttons.resetbutton(type='reset' value='Reset') Reset
                         button.formbuttons.submitbutton(type='submit' value='Submit') Submit
-                    
+        
+        .container-md
+            table.table
+                thead
+                    tr
+                    th(scope='col') Name
+                    th(scope='col') Description
+                    th(scope='col') Price
+                    th(scope='col')
+                
+                tbody.listtable
+                    each package in packages
+                            tr 
+                            td #{package.PkgName}
+                            td #{package.PkgDesc}
+                            td $#{package.PkgBasePrice}
+                            td 
+                                a.deleteButton(href='/delete/' + package._id onclick='Confirm_Buttons()') DELETE

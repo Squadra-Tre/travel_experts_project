@@ -10,13 +10,13 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
 const db = mongoose.connection;
 
 router.get('/', function (req, res, next){
-  pack.find(function(err,packages) {
+  packs.find(function(err,packages) {
     res.render('add', {packages});
 });
   });
 
 router.post('/', function (req, res, next) {
-  const travpack = new pack(req.body);
+  const travpack = new packs(req.body);
 
   travpack.save((err, result)=> {
     if (err) return console.log(err);

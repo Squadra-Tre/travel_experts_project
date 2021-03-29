@@ -56,4 +56,15 @@ packSchema.plugin(AutoIncrement, {inc_field: '_id'});
 packSchema.plugin(AutoIncrement, {inc_field: 'PackageId'});
 
 
-module.exports = mongoose.model('package', packSchema)
+packs = mongoose.model('package', packSchema)
+        
+module.exports={
+   deleteData:function(deleteId, callback){
+                  
+      userData= packs.findByIdAndDelete(deleteId);
+      userData.exec(function(err, data){
+        if (err) throw err;
+         return callback(data);
+      })
+   }
+}

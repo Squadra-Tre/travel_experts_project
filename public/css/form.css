@@ -67,12 +67,21 @@ body {
   color: white;
   margin: 5px;
 }
+.resetbutton:hover {
+  background-color: rgb(20, 23, 24);
+  color: rgb(110, 110, 110);
+}
 .submitbutton {
   background-color: rgb(112, 207, 196);
   border: rgb(112, 207, 196);
   color: white;
   font-size: 30px;
   margin: 5px;
+}
+.submitbutton:hover {
+  color: rgb(161, 161, 161);
+  text-decoration: none;
+  background-color: rgb(42, 109, 101);
 }
 
 table,
@@ -110,4 +119,11 @@ th {
   border-radius: 5px;
   margin: 5px;
   margin-left: 10px;
+  font-weight: bold;
+}
+
+.deleteButton:hover {
+  color: rgb(161, 161, 161);
+  text-decoration: none;
+  background-color: rgb(42, 109, 101);
 }
