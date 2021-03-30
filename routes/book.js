@@ -6,7 +6,7 @@ const { Package } = require('../models/regin');
 const { Booking } = require('../models/regin');
 
 // Author: Cecilia Santiago
-/* GET one  package */
+/* GET one  package using PakcageId as parameter */
 router.get("/:prodid", function (req, res, next) {
     Package.findOne({ PackageId: req.params.prodid }, (err, pkg) => {
         if (err) {

@@ -112,11 +112,12 @@ block content
         .column
           .card
             .container
-              h2=agent.AgtFirstName
-              h2= agent.AgtLastName
+              h2= agent.AgtFirstName + ' ' + agent.AgtLastName       
               h4.title= agent.AgtPosition
               h5.title= agent.AgtEmail
               h5.title= agent.AgtBusPhone
+              h4= agent.agency.AgncyAddress
+              h4= agent.agency.AgncyCity              
               button.button 
                 a(href= "mailto:agent.AgtEmail" style='color: white;' )
                 | Contact 
