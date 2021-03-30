@@ -110,8 +110,8 @@ const regSchema = new mongoose.Schema({
 regSchema.plugin(uniqueValidator);
 
 // autoincrement _id and CustomerId by 1
-regSchema.plugin(autoIncrement.plugin, { model: 'Customer', field: '_id', startAt: 149 });
-regSchema.plugin(autoIncrement.plugin, { model: 'Customer', field: 'CustomerId', startAt: 149 });
+regSchema.plugin(autoIncrement.plugin, { model: 'Customer', field: '_id', startAt: 1 });
+regSchema.plugin(autoIncrement.plugin, { model: 'Customer', field: 'CustomerId', startAt: 1 });
 
 //.Customer came from users.js const { Customer } = require("../models/user");
 module.exports.Customer = mongoose.model('Customer', regSchema);

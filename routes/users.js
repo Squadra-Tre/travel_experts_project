@@ -38,15 +38,18 @@ router.post("/register", function (req, res, next) {
       if (err) {
         const errorObj = {};
         const errorKeys = Object.keys(err.errors);
+        /* Map error message with Schema */
         errorKeys.forEach(key => errorObj[key] = err.errors[key].message);
-        //console.log(errorObj);
+
+        /* Open register page */
         return res.render("customer",
           {
             errors: errorObj,
             data: req.body,
-            invbox: "border border-danger",
+            invbox: "border border-danger autofocus='autofocus'",
           });
       }
+      /* Display a message that account has been created */
       const accntmsg = `Your account has been created ${result.CustFirstName} ${result.CustLastName}`;
       res.redirect('/users/register/?accntmsg=' + accntmsg);
     });

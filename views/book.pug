@@ -16,8 +16,6 @@ block othlink
 
 block content  
   
-  //h3#usermsg.alert.alert-success= usermsg
-
   if !currentUser     
     form(style="padding: 15px;" method='POST' action='/login?redirect=/book/' + pack.PackageId)
       .form-row

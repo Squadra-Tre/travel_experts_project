@@ -4,7 +4,6 @@
 
 const mongoose = require('mongoose'), autoIncrement = require('mongoose-auto-increment');
 
-
 mongoose.connect(process.env.MONGO_URL,
     { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false, useCreateIndex: true });
 
@@ -47,6 +46,7 @@ const packSchema = new mongoose.Schema({
 
 
 module.exports.Package = mongoose.model('Package', packSchema);
+
 
 // Schema for booking
 
