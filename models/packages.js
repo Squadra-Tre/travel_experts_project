@@ -1,3 +1,7 @@
+/*Matt Biesbroek - Team 3*/
+
+/*Schema for Travel Pacakges*/
+
 const mongoose = require('mongoose');
 const AutoIncrement= require('mongoose-sequence')(mongoose);
 const Schema = mongoose.Schema;

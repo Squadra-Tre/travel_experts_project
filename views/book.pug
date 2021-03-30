@@ -48,9 +48,15 @@ block content
 
       .form-row      
         .form-group.col-md-4
-          label(for='currdate') Date of Booking:
-          input#currdate.form-control(type='date' name='BookingDate' placeholder='yyyy-mm-dd' required='')
-          small#msg(style='display:none;') Enter Date booking here.
+          label(for='currdate') Start Date:
+          input#currdate.form-control(type='date' name='StartDate' placeholder='yyyy-mm-dd' required='')
+          small#msg(style='display:none;') Enter Start travel here.
+        
+        .form-group.col-md-4
+          label(for='currdate') End Date:
+          input#currdate.form-control(type='date' name='EndDate' placeholder='yyyy-mm-dd' required='')
+          small#msg(style='display:none;') Enter End travel here.
+
 
         .form-group.col-md-3
           label(for='travelcnt') No. of Traveller:

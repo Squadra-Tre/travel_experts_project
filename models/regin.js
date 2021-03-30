@@ -65,6 +65,16 @@ const bookSchema = new mongoose.Schema({
         required: true
     },
 
+    StartDate: {
+        type: Date,        
+        required: true
+    },
+
+    EndDate: {
+        type: Date,        
+        required: true
+    },
+
     BookingNo: {
         type: String,
         trim: true,
