@@ -1,3 +1,7 @@
+/*Matt Biesbroek - Team 3*/
+
+/*Controller for deleting packages from the database*/
+
 var deleteModel= require('../models/packages');
 module.exports={
     deleteData:function(req, res){
