@@ -1,12 +1,14 @@
-var express = require('express');
+// Author: Balpreet Singh
+var express = require("express");
 var router = express.Router();
 const Agent = require("../models/contact");
 const Agency = require("../models/agency");
 const mongoose = require("mongoose");
 
 const dbURI = process.env.MONGO_URL;
-mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then((result) => console.log('CONTACTS connected to db.'))
+mongoose
+  .connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
+  .then((result) => console.log("CONTACTS connected to db."))
   .catch((err) => console.log(err));
 const db = mongoose.connection;
 
